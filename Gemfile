@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'thin'
 
 group :development, :test do
   gem 'sqlite3'
