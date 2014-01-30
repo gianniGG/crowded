@@ -27,13 +27,20 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'devise'
+gem 'omniauth-twitter'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'spring'
   gem 'rspec-rails'
   gem 'capybara'
-
 end
+
+
+gem 'rails_12factor', group: :production
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',          group: :doc, require: false
