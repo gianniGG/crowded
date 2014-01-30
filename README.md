@@ -5,8 +5,9 @@ A gammy funding platform
 
 |Must |Should |Could |
 |:--- |:----- |:---- |
-|Payment
-
-Investor Profile
-
-Project Profile||
+|Payment |linked-in credentials |none|
+|Investor Profile | Reward system | |
+|Project Profile |||
+||||
+||||
+||||||||
