@@ -17,4 +17,7 @@ A gammy funding platform
 |Project approval|||
 |Event trigged communication/email|||
 |APIs|||
-|FB, Twitter, LinkedIn, Pusher, Wistia, Ducksboard, Crowdtilt, Stripe, GoCardless, Paypal, Stormpath, New Relic|||
+|FB, Twitter, LinkedIn|||
+|Pusher, Wistia, Ducksboard|||
+| Crowdtilt, Stripe, GoCardless|||
+| Paypal, Stormpath, New Relic|||
