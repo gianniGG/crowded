@@ -29,8 +29,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
 gem 'omniauth-twitter'
-# gem 'fb_graph' #for fb
-# gem 'linkedin' #forlinkedin
+gem 'fb_graph'
+gem 'linkedin'
 gem 'pusher'
 gem 'thin'
 
