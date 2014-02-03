@@ -6,11 +6,11 @@ class OmniauthCallbacksController < ApplicationController
   end
 
   def facebook
-
+    user = User.facebook_auth request.env["omniauth.auth"]
   end
 
   def linkedin
-
+    user = User.linkedin_auth request.env["omniauth.auth"]
   end
 
 

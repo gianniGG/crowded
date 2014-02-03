@@ -16,8 +16,19 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.facebook_auth auth
+    credentials = {uid: auth[:uid], provider: auth[:provider] }
+
+  end
+
+  def self.linkedin_auth auth
+    credentials = {uid: auth[:uid], provider: auth[:provider] }
+  end
+
   def email_required?
     return false if provider == 'twitter'
     super
   end
+
+
 end
