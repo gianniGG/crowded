@@ -21,3 +21,11 @@ A gammy funding platform
 |Pusher, Wistia, Ducksboard|||
 | Crowdtilt, Stripe, GoCardless|||
 | Paypal, Stormpath, New Relic|||
+
+Project page
+---
+Priorities
+
+1. Get 'em to donate
+2. Get 'em to share/ retweet etc.
+3. Get 'em to check out related vids
