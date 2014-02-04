@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
   root 'projects#index'
-  resources :users
+
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
+  resources :users do
+    member do
+      get 'interests'
+    end
+  end
+
   resources :projects
 
   end

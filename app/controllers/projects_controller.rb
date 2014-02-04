@@ -22,6 +22,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
+    @projects = Project.all
   end
 
   def show
