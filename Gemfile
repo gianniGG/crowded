@@ -38,6 +38,8 @@ gem 'omniauth-linkedin'
 gem 'pusher'
 gem 'thin'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 group :development, :test do
   gem 'spring'
   gem 'rspec-rails'

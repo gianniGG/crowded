@@ -1,8 +1,13 @@
-<%= link_to 'Launch a Mission', new_project_path %>
+<% if current_user %>
+  <%= link_to 'Launch a Mission', new_project_path %>
 
-<% @projects.each do |proj| %>
-  <h3>Mission</h3>
-  <%= proj.name %>
-  <h4>Statement</h4>
-  <%= proj.mission_statement %>
+  <% @projects.each do |proj| %>
+    <h3>Mission</h3>
+    <%= proj.name %>
+    <h4>
+      Captain: <%= User.find_by_id(proj.creator_id).name %>
+    </h4>
+    <h4>Statement</h4>
+    <%= proj.mission_statement %>
+  <% end %>
 <% end %>

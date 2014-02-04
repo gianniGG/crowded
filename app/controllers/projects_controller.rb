@@ -5,8 +5,11 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @project = Project.create(project_params)
-    @project.users << current_user
+    @project.users << @user
+    @project.creator_id = @user.id
+
     if @project.save
       flash[:notice] = 'Mission launched!'
       redirect_to user_path(current_user)
