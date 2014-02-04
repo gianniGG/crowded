@@ -44,12 +44,13 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
 
 
 gem 'rails_12factor', group: :production
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',          group: :doc, require: false
