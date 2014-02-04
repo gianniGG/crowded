@@ -22,7 +22,10 @@ Devise.setup do |config|
   require 'devise/orm/active_record'
 
   config.omniauth :twitter, Rails.application.secrets.twitter_key, Rails.application.secrets.twitter_secret
-  # config.omniauth :facebook, "APP_ID", "APP_SECRET"
+
+  config.omniauth :facebook, Rails.application.secrets.facebook_key, Rails.application.secrets.facebook_secret
+
+  config.omniauth :linkedin, Rails.application.secrets.linkedin_key, Rails.application.secrets.linkedin_secret
   # config.omniauth :linkedin, "APP_ID", "APP_SECRET"
 
   # ==> Configuration for any authentication mechanism
