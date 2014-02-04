@@ -1,7 +1,7 @@
 class OmniauthCallbacksController < ApplicationController
 
-  def authorize api
-    user = User.__send__("#{api}_auth", request.env["omniauth.auth"])
+  def authorize email_required=true
+    user = User.auth request.env["omniauth.auth"], email_required
     sign_in_and_redirect user
   rescue ActiveRecord::RecordNotUnique
     flash[:alert] = 'User already exists with that email'
@@ -9,15 +9,15 @@ class OmniauthCallbacksController < ApplicationController
   end
 
   def twitter
-    authorize 'twitter'
+    authorize false
   end
 
   def facebook
-    authorize 'facebook'
+    authorize
   end
 
   def linkedin
-    authorize 'linkedin'
+    authorize
   end
 
 

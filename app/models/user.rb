@@ -6,25 +6,13 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :projects
 
-  def self.twitter_auth auth
-    auth_user auth
-  end
-
-  def self.facebook_auth auth
-    auth_user auth, true
-  end
-
-  def self.linkedin_auth auth
-    auth_user auth, true
-  end
-
   def email_required?
     return false if provider == 'twitter'
     super
   end
 
   private
-    def self.auth_user auth, email_required=false
+    def self.auth auth, email_required
       credentials = {uid: auth[:uid], provider: auth[:provider] }
       pwd = Devise.friendly_token[0,20]
 
