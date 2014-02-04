@@ -1,7 +1,13 @@
+<%= link_to 'Back to Launch Center', projects_path %>
+
 <%= form_for @project do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name %>
 
+  <%= f.label :mission_statement %>
+  <%= f.text_field :mission_statement %>
+
+  <%= f.submit :launch %>
 
 <% end %>
