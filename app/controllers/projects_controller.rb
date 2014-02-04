@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
     @user = current_user
     @project = Project.create(project_params)
     @project.users << @user
-    @project.creator_id = @user.id
+    @project.creator = @user.name
 
     if @project.save
       flash[:notice] = 'Mission launched!'

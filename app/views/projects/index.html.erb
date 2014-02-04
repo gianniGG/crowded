@@ -5,7 +5,7 @@
     <h3>Mission</h3>
     <%= proj.name %>
     <h4>
-      Captain: <%= User.find_by_id(proj.creator_id).name %>
+      Captain: <%= proj.creator %>
     </h4>
     <h4>Statement</h4>
     <%= proj.mission_statement %>

@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
         user.email = auth[:info][:email] if email_required
         user.password = pwd
         user.password_confirmation = pwd
-        user.profile_picture = auth[:extra][:profile_image_url]
+        user.profile_picture = auth[:info][:image]
       end
     end
 
