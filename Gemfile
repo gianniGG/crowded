@@ -5,6 +5,7 @@ ruby '2.1.0'
 gem 'rails', '4.1.0.beta1'
 
 # Use sqlite3 as the database for Active Record
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
@@ -32,13 +33,12 @@ gem 'omniauth-twitter'
 
 gem 'omniauth-facebook'
 gem 'fb_graph'
-gem 'linkedin'
+gem 'omniauth-linkedin'
 
 gem 'pusher'
 gem 'thin'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'spring'
   gem 'rspec-rails'
   gem 'capybara'
