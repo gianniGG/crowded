@@ -11,6 +11,8 @@ class OmniauthCallbacksController < ApplicationController
 
   def twitter
     authorize false
+    raise request.env['omniauth.auth'].inspect
+
   end
 
   def facebook
