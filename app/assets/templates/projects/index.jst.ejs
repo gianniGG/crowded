@@ -1,10 +1,11 @@
 <h1>Projects</h1>
 
-<table>
+<% projects.each(function(model){ %>
 
-  <tr>
-    <th>Title</th>
-    <th>Completed</th>
-  </tr>
+  <h3><%= model.escape('name') %>
+    <span>Captain: <%= model.escape('creator') %></span>
+  </h3>
+  <p><%= model.escape('mission_statement') %></p>
 
-</table>
+<% }); %>
+
