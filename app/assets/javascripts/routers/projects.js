@@ -4,6 +4,7 @@ CrowddedApp.Routers.Projects = Backbone.Router.extend({
   },
 
   index: function() {
-
+    var view = new CrowddedApp.Views.ProjectsIndex({ collection: CrowddedApp.projects });
+    $('body').html(view.render().$el);
   }
 });
