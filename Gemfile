@@ -40,6 +40,10 @@ gem 'thin'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+#javascripty stuff
+gem 'ejs'
+gem 'js-routes'
+
 group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
