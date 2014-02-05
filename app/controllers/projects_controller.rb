@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  respond_to :html, :json
 
   def new
     @project = Project.new
@@ -25,7 +26,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    respond_with(@projects = Project.all)
   end
 
   def show

@@ -40,6 +40,10 @@ gem 'thin'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+#javascripty stuff
+gem 'ejs'
+gem 'js-routes'
+
 group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
@@ -49,7 +53,6 @@ end
 
 gem 'rails_12factor', group: :production
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',          group: :doc, require: false
