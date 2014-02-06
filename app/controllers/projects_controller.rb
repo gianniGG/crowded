@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
   respond_to :html, :json
 
+  def home
+  end
+
   def new
     @project = Project.new
   end
