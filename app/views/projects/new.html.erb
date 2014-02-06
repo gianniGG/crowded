@@ -5,7 +5,19 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <%= f.label :mission_statement %>
+  <div id="wistia-upload-widget" style="width: 200px; height: 30px;"></div>
+  <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
+  <script>
+    var widget1 = new wistia.UploadWidget({ 
+      divId: 'wistia-upload-widget', 
+      publicProjectId: '8fwsjy2xc5',
+       
+    });
+  </script>
+  <br/>
+  <br/>
+  
+  <%= f.label :mission_statement %> 
   <%= f.text_field :mission_statement %>
 
   <%= f.submit :launch %>
