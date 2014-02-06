@@ -6,6 +6,6 @@ var CrowddedApp = {
   initialize: function(data) {
     this.projects = new CrowddedApp.Collections.Projects(data.projects);
     new CrowddedApp.Routers.Projects();
-    Backbone.history.start();
+    Backbone.history.start({pushState: true});
   }
 };
