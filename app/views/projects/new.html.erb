@@ -11,7 +11,11 @@
     var widget1 = new wistia.UploadWidget({ 
       divId: 'wistia-upload-widget', 
       publicProjectId: '8fwsjy2xc5',
-       
+      callbacks: {
+        'uploadSuccess': function(jsonFile){
+          $('#project_hashed_id').val(jsonFile['hashed_id']);
+        }
+      }
     });
   </script>
   <br/>
@@ -19,7 +23,7 @@
   
   <%= f.label :mission_statement %> 
   <%= f.text_field :mission_statement %>
-
+  <%= f.hidden_field :hashed_id, :value => "" %>
   <%= f.submit :launch %>
 
 <% end %>

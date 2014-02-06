@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204170523) do
+ActiveRecord::Schema.define(version: 20140206131807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140204170523) do
     t.string   "mission_statement"
     t.string   "donors"
     t.string   "creator"
+    t.string   "hashed_id"
   end
 
   create_table "projects_users", id: false, force: true do |t|
