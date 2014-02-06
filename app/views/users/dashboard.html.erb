@@ -1,0 +1,9 @@
+<%= content_for :javascript do -%>
+  <%= javascript_tag do %>
+    CrowddedApp.initialize({ users: <%= @users.to_json.html_safe %> });
+  <% end %>
+<% end -%>
+
+
+
+
