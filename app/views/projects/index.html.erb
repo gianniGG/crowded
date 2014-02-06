@@ -1,9 +1,5 @@
 <%= content_for :javascript do -%>
-  <%= javascript_tag do %>
-    CrowddedApp.initialize({ projects: <%= @projects.to_json.html_safe %> });
-  <% end %>
+ <%= javascript_tag do %>
+   CrowddedApp.initialize({});
+ <% end %>
 <% end -%>
-
-
-
-
