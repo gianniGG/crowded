@@ -30,6 +30,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    respond_with(@projects = Project.all)
   end
 
   private
