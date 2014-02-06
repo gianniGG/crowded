@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
 
   before_save { self.name = name.downcase }
 
-  validates :name, presence: true, length: { in: 4..30 }
-  validates :mission_statement, presence: true, length: { in: 4..140 }
+  validates :name, presence: true
+  validates :mission_statement, presence: true
 
 end
