@@ -1,0 +1,85 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="956" measuredH="627" mockupW="947" mockupH="619">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TextInput" x="301" y="83" w="-1" h="-1" measuredW="142" measuredH="35" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <bold>true</bold>
+        <color>13576743</color>
+        <size>24</size>
+        <state>focused</state>
+        <text>MUST%20Have</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::VRule" x="489" y="176" w="-1" h="-1" measuredW="10" measuredH="100" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TextArea" x="271" y="118" w="203" h="197" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logo%0AInvestor%20PROFILE%0ACompany%20PROFILE%0AHOMEPAGE%0ACompany%20DASHBOARD%0A-Back%20end%0AApproval%20System%0ASocial%20Baking%0AReal%20time%20Updates%0ALaunch%20Mission%20%28Project%29%0AEvent%20Triggered%20Comm%0AAPI</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::StickyNote" x="271" y="440" w="315" h="143" measuredW="109" measuredH="123" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <color>10470904</color>
+        <text>Crowding%20starts%20with%201%20person%2C%20with%201%20brilliant%20idea%0AWorld%20is%20changing.%20So%20does%20investing%0AShare%20idea%20globally%0ATurn%20dream%20to%20reality%0AMake%20money%20%26%20Make%20a%20difference%0ASocial%20entreprenship%0A%20%0AIdeas%20/%20Visions%20/%20Crowds%20/%20Funds</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextArea" x="507" y="118" w="203" h="197" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Credibility%20Checks%0AReward%20Systems%0AEvent%20Page%0AAmazing%20Animations%0ANewsFeed%0AChat%20/%20Messaging</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="537" y="83" w="-1" h="-1" measuredW="173" measuredH="35" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <bold>true</bold>
+        <color>13576743</color>
+        <size>24</size>
+        <state>focused</state>
+        <text>SHOULD%20Have</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextArea" x="753" y="118" w="203" h="197" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Equity%20Based%20Investment</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextInput" x="783" y="83" w="-1" h="-1" measuredW="158" measuredH="35" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <bold>true</bold>
+        <color>13576743</color>
+        <size>24</size>
+        <state>focused</state>
+        <text>COULD%20Have</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::VRule" x="728" y="176" w="-1" h="-1" measuredW="10" measuredH="100" zOrder="8" locked="false" isInGroup="-1"/>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Tooltip" x="112" y="38" w="549" h="34" measuredW="527" measuredH="0" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Social%20entrepreneurs%20helping%20investors%20make%20money%20while%20making%20a%20difference</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Link" x="97" y="8" w="-1" h="-1" measuredW="212" measuredH="30" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>www.crowdded.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::TagCloud" x="271" y="343" w="390" h="76" measuredW="350" measuredH="110" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Technologies%3A%0A%20%0ASocial%20Media%20API%20Pusher%20Wistia%20DucksBoard%20Crowd-Tilt%20Stripe%20GoCardless%20Paypal%20Stormpath%20New-Relic%20Backbone%20Foundation</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Menu" x="9" y="117" w="211" h="-1" measuredW="150" measuredH="510" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%7Bcolor%3A%23FF0000%7DGiacomo%7Bcolor%7D%20%28Front-end%20spec%29%0AUI%20design%20%0AMockup%20architecture%0ADynamic%20content%0AAnimations%0A---%0A%7Bcolor%3A%23FF0000%7DAnath%7Bcolor%7D%20%28Front-end%20spec%29%0ALogo%0AConsistent%20Design%0APages%20architecture%0AGamification%20research%0A---%0A%7Bcolor%3A%23FF0000%7DJames%7Bcolor%7D%20%28Back-end%20spec%29%0AAPI%20Linking%0ARESTFUL%20interface%0AStormpath%0ABackbone.js%0A%3D%0A%7Bcolor%3A%23FF0000%7DTom%7Bcolor%7D%20%28Back-end%20spec%29%0ABackbone.js%0ARuby%20on%20Rails%20Architecture%0ALearn%20animations%0A%3D%0A%7Bcolor%3A%23FF0000%7DGianni%7Bcolor%7D%20%28Project%20manager%29%0AUX%20design%0AAPI%20integration%0AFoundation%20and%20Backbone%20JS%0APayment%20integration</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Tooltip" x="23" y="84" w="-1" h="-1" measuredW="81" measuredH="33" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>TEAM</text>
+        <tooltipDirection>SW</tooltipDirection>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
