@@ -1,0 +1,9 @@
+<h3><%= model.escape('name') %></h3>
+<h4>Captain: <%= model.escape('creator') %></h4>
+<p><%= model.escape('mission_statement') %></p>
+
+<form action="charges/new" class="button_to" method="get">
+  <div>
+    <input value="Donate" type="submit">
+  </div>
+</form>
