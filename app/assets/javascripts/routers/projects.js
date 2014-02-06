@@ -1,6 +1,7 @@
 CrowddedApp.Routers.Projects = Backbone.Router.extend({
   routes: {
-    "":"index"
+    "":"index",
+    "projects":"index"
   },
 
   index: function() {
