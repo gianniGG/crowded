@@ -1,5 +1,9 @@
 CrowddedApp.Collections.Projects = Backbone.Collection.extend({
   model: Project,
-  rootUrl: '/projects/index',
-  url: '/projects/index.json'
+  url: '/projects'
+});
+
+CrowddedApp.Collections.Project = Backbone.Collection.extend({
+  model: Proj,
+  url: '/projects/:id'
 });

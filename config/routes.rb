@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-
   root 'projects#index'
 
+  devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+  devise_for :companies, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
+  resources :companies, except: [:destroy]
+
+  resources :companies do
+    resources :projects
+  end
 
   resources :users do
     member do
@@ -11,8 +18,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :projects
-
-  resources :charges
+  resources :projects do
+    resources :charges
+  end
 
   end

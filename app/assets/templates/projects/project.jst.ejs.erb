@@ -1,0 +1,15 @@
+<h3>
+  Mission:
+  <a href="/projects/{{= model.escape('id')}}">
+    {{= model.escape('name') }}
+  </a>
+</h3>
+
+<h4>Captain: {{= model.escape('company') }}company_name ... sort this out</h4>
+<p>Statement: {{= model.escape('mission_statement') }}</p>
+
+<form action="projects/{{=model.escape('id')}}/charges/new">
+  <input type="submit" value="Donate" id="{{=model.escape('id')}}">
+</form>
+
+

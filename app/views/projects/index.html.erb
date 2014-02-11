@@ -1,5 +1,11 @@
+
+<ul class="hmenu">
+  <%= render 'devise/menu/login_items' %>
+  <%= render 'devise/menu/registration_items' %>
+</ul>
+
 <%= content_for :javascript do -%>
- <%= javascript_tag do %>
-   CrowddedApp.initialize({});
- <% end %>
+  <%= javascript_tag do %>
+    CrowddedApp.initialize({});
+  <% end %>
 <% end -%>

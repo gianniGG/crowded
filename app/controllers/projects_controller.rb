@@ -6,14 +6,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @user = current_user
     @project = Project.create(project_params)
-    @project.users << @user
-    @project.creator = @user.name
-
     if @project.save
       flash[:notice] = 'Mission launched!'
-      redirect_to user_path(current_user)
+      redirect_to projects_path
     else
       render 'new'
     end
@@ -30,11 +26,11 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    respond_with(@projects = Project.all)
+    respond_with(@project = Project.find(params[:id]))
   end
 
   private
     def project_params
-      {name: params[:project][:name], mission_statement: params[:project][:mission_statement], hashed_id: params[:project][:hashed_id]}
+      {company: current_company, name: params[:project][:name], mission_statement: params[:project][:mission_statement], hashed_id: params[:project][:hashed_id]}
     end
 end

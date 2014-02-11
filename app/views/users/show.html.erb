@@ -1,8 +1,1 @@
 <%= image_tag @user.profile_picture %>
-
-<% @projects.each do |proj| %>
-  <h3>Mission</h3>
-  <%= proj.name.titleize %>
-  <h4>Statement</h4>
-  <%= proj.mission_statement %>
-<% end %>

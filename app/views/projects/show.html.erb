@@ -1,6 +1,11 @@
+<h2><%= @project.name %></h2>
+So @project gets passed through
+<br>
+and we can do some Backbony stuff too
+
 <%= content_for :javascript do -%>
   <%= javascript_tag do %>
-    CrowddedApp.initialize({ projects: <%= @projects.to_json.html_safe %> });
+    CrowddedApp.initialize({});
   <% end %>
 <% end -%>
 

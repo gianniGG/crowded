@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
   respond_to :html, :json
 
-  before_action :signed_in?
+  # before_action :signed_in?
 
   def index
   end
 
   def show
     @user = User.find(params[:id])
-    @projects = @user.projects
   end
 
   def interests
@@ -17,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    respond_with(@users = User.all)
+    respond_with(@user = User.find(params[:id]))
   end
 
 

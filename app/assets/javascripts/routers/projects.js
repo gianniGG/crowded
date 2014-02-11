@@ -1,16 +1,22 @@
 CrowddedApp.Routers.Projects = Backbone.Router.extend({
   routes: {
+    "":"index",
     "projects":"index",
-    "projects/:id":"show"
+    "projects/:id":"show",
+    "companies/:id/projects/:id":"show"
   },
 
   index: function() {
-    var view = new CrowddedApp.Views.ProjectsIndex({ collection: CrowddedApp.projects });
-    $('body').html(view.render().$el);
+    var index = new CrowddedApp.Views.ProjectsIndex({
+      collection: CrowddedApp.projects
+    });
+    $('body').html(index.render().$el);
   },
 
   show: function() {
-    var view = new CrowddedApp.Views.ProjectShow({ collection: CrowddedApp.projects });
-    $('body').html(view.render().$el);
+    var show = new CrowddedApp.Views.ProjectShow({
+      collection: CrowddedApp.Collections.Project
+    });
+    $('body').html(show.render().$el);
   }
 });
