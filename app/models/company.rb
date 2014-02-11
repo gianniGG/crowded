@@ -4,9 +4,16 @@ class Company < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_one :user
   has_many :projects
 
+  before_create { self.user = create_ghost_user }
+
   private
+
+    def create_ghost_user
+      User.create(email: self.email, password: self.password, password_confirmation: self.password_confirmation)
+    end
 
     def self.auth auth, emailed_required
       credentials = {uid: auth[:uid], provider: auth[:provider] }

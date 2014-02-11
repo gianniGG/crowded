@@ -5,10 +5,6 @@ class ChargesController < ApplicationController
   def create
     # Amount in cents
     @amount = 100
-    @project = Project.find(params[:project_id])
-    @project.funds += @amount
-
-    Donation.create(amount: @amount, user: current_user, project: @project, points: @amount/100)
 
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
@@ -21,6 +17,20 @@ class ChargesController < ApplicationController
       :description => 'Rails Stripe customer',
       :currency    => 'gbp'
     )
+
+    if params[:project_id]
+      @project = Project.find(params[:project_id])
+      @project.update(funds: (@project.funds + @amount))
+      current_user.update(points: (current_user.points + @amount/100))
+      Donation.create(amount: @amount, user: current_user, project: @project, points: @amount/100)
+      redirect_to project_path(@project)
+    end
+
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+      @user.update(balance: (@user.balance + @amount))
+      redirect_to user_path(@user)
+    end
 
   rescue Stripe::CardError => e
     flash[:error] = e.message

@@ -10,6 +10,22 @@
   </li>
 <% else %>
   <li>
-  <%= link_to('Login', new_user_session_path)  %>
+  <%= link_to('Login as User', new_user_session_path)  %>
+  </li>
+<% end %>
+
+<% if company_signed_in? %>
+  <li>
+    <%= link_to 'Launch Center', projects_path %>
+  </li>
+  <li>
+  <%= link_to('Logout', destroy_company_session_path, :method => :delete) %>
+  </li>
+  <li>
+  <%= link_to 'Profile', company_path(current_company) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login as Company', new_company_session_path)  %>
   </li>
 <% end %>

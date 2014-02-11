@@ -1,1 +1,11 @@
-<%= image_tag @user.profile_picture %>
+<%= image_tag @user.profile_picture, height: '32', width: '32' %>
+
+<!-- Stripe -->
+<%= form_tag user_charges_path(@user) do %>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="100" data-label="Credit My Account"></script>
+<% end %>
+

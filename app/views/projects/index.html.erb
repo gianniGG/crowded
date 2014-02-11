@@ -1,11 +1,14 @@
+<%= link_to 'New Mission', new_project_path %>
 
-<ul class="hmenu">
-  <%= render 'devise/menu/login_items' %>
-  <%= render 'devise/menu/registration_items' %>
-</ul>
+<% @projects.each do |prj| %>
+  <h2>
+    Company: <%= prj.company.name %>
+    <h3>
+      <%= link_to prj.name, project_path(prj) %>
+    </h3>
+    <h4>
+      Mission Statement: <%= prj.mission_statement %>
+    </h4>
+  </h2>
+<% end %>
 
-<%= content_for :javascript do -%>
-  <%= javascript_tag do %>
-    CrowddedApp.initialize({});
-  <% end %>
-<% end -%>
