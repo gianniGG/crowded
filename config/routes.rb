@@ -21,7 +21,6 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :charges
-
     member do
       get 'home'
     end
@@ -31,4 +30,5 @@ Rails.application.routes.draw do
     resources :charges
   end
 
-  end
+end
+

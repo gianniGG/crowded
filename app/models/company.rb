@@ -6,6 +6,8 @@ class Company < ActiveRecord::Base
 
   has_one :user
   has_many :projects
+  has_many :donations, through: :projects
+  has_many :users, through: :donations
 
   before_create { self.user = create_ghost_user }
 
