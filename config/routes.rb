@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'projects#index'
+
+  root 'projects#home'
 
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
@@ -21,5 +22,11 @@ Rails.application.routes.draw do
   resources :projects do
     resources :charges
   end
+    member do
+      get 'home'
+    end
+  end
+
+  resources :charges
 
   end
