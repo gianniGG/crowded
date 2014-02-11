@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :company
   has_many :donations
+  has_many :users, through: :donations
 
   before_save { self.name = name.downcase }
   before_save { self.funds = 0 }

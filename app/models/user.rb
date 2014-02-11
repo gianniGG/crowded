@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_many :donations
+  has_many :projects, through: :donations
 
   def email_required?
     return false if provider == 'twitter'

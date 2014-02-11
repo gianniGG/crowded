@@ -22,11 +22,9 @@ Rails.application.routes.draw do
   resources :projects do
     resources :charges
   end
-    member do
+  resources :member do
       get 'home'
-    end
   end
 
   resources :charges
-
-  end
+end

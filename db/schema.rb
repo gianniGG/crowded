@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20140211112546) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "mission_statement"
+    t.string   "donors"
     t.string   "creator"
     t.string   "hashed_id"
     t.integer  "company_id"
@@ -82,6 +83,11 @@ ActiveRecord::Schema.define(version: 20140211112546) do
   end
 
   add_index "projects", ["company_id"], name: "index_projects_on_company_id", using: :btree
+
+  create_table "projects_users", id: false, force: true do |t|
+    t.integer "project_id", null: false
+    t.integer "user_id",    null: false
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

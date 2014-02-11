@@ -5,6 +5,8 @@ class Company < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :projects
+  has_many :donations, through: :projects
+  has_many :users, through: :donations
 
   private
 
