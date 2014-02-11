@@ -1,4 +1,4 @@
-<%= image_tag @user.profile_picture, height: '32', width: '32' %>
+<%= image_tag @user.profile_picture, class: 'profile-pic' %>
 
 <!-- Stripe -->
 <%= form_tag user_charges_path(@user) do %>

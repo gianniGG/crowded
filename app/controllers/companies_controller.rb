@@ -1,6 +1,11 @@
 class CompaniesController < ApplicationController
   respond_to :html, :json
 
+  def new
+    session[:company_signup] = true
+    redirect_to user_omniauth_authorize_path(:linkedin)
+  end
+
   def index
     @companies = Company.all
   end
