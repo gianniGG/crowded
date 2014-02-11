@@ -8,6 +8,5 @@ class UpdatesToTheProjectModel < ActiveRecord::Migration
     add_column :projects, :hit_target, :boolean
     add_column :projects, :approved, :boolean
     add_column :projects, :company_editable, :boolean
-    remove_column :projects, :donors
   end
 end

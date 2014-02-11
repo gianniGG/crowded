@@ -21,7 +21,7 @@ class ChargesController < ApplicationController
     if params[:project_id]
       @project = Project.find(params[:project_id])
       @project.update(funds: (@project.funds + @amount))
-      current_user.update(points: (current_user.points + @amount/100))
+      current_user.update(points: (current_user.points + @amount/100), balance: (current_user.balance - @amount))
       Donation.create(amount: @amount, user: current_user, project: @project, points: @amount/100)
       redirect_to project_path(@project)
     end
@@ -29,7 +29,7 @@ class ChargesController < ApplicationController
     if params[:user_id]
       @user = User.find(params[:user_id])
       @user.update(balance: (@user.balance + @amount))
-      redirect_to user_path(@user)
+      redirect_to user_path(@userew)
     end
 
   rescue Stripe::CardError => e
