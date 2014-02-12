@@ -1,0 +1,357 @@
+body, h1, h2, h3, h4, h5, h6, p, div {
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif ;
+}
+
+h1 {
+font-size: 40px;
+font-weight: 700;
+}
+
+h2 {
+font-size: 34px;
+font-weight: 600;
+}
+
+h3 {
+font-size: 24px;
+font-weight: 500;
+}
+
+h4 {
+font-size: 18px;
+font-weight: 500;
+}
+
+h5 {
+font-size: 12px;
+font-weight: 200;
+}
+
+h6 {
+font-size: 9px;
+font-weight: 200;
+}
+
+
+.row {
+padding: 10px;
+}
+
+.large-12.columns {
+  width:100%;
+  height:auto;
+}
+
+input[type="text"] {
+  height: 29px;
+}
+
+/*TOP SECTION: PROJECT OVERVIEW*/
+
+hr {
+  border: none;
+  height: 2px;
+  color: black;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#double {
+  width:700px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  overflow: hidden;
+  padding: 0;
+}
+
+#double li {
+  line-height: 1.3em;
+  float: left;
+  display: inline;
+  width: 33.333%;
+  color: black;
+}
+
+#double h2, h4 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+
+.row.portal {
+  padding-bottom: 100px;
+}
+
+#portal.large-12.columns.portal {
+  background-color: #42c883;
+  font-size: 16px;
+  height: auto;
+  text-align: left;
+  padding: 30px;
+  display: none;
+  color: #2e2e2e;
+}
+
+#portal2.large-12.columns.portal {
+  background-color: #42c883;
+  font-size: 16px;
+  height: auto;
+  text-align: left;
+  padding: 30px;
+  display: none;
+  color: #2e2e2e;
+}
+
+
+#block1-bg {
+  background-color: #3CB371;
+}
+
+#block1-bg .columns {
+  padding-left: 0;
+  padding-right: 0;  
+}
+
+#block2-bg {
+  background-color: white;
+}
+
+#block3-bg {
+  background-color: #3CB371;
+  padding-bottom: 100px;
+}
+
+#block4-bg {
+  background-color: white;
+}
+
+.block2 h3 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+div.large-8.columns.wistia {
+  padding-left: 0 !important;
+}
+
+
+.make-it-happen-btn {
+  width: 290px;
+  height: 135px;
+  background-color: rgb(223, 220, 83);
+  border-width: 2px;
+  border-color: black;
+  border-radius: 2px;
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  outline: none;
+  display: block;
+  padding-top: 0;
+}
+
+:hover.make-it-happen-btn {
+  background-color: rgb(240, 170, 100);
+  transition:background 2s ease-out, background .3s ease-in;
+}
+
+#company-btn, #project-btn {
+  width: 290px;
+  height: 85px;
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  margin-left: auto;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 2px;
+  display: block;
+  outline: none;
+}
+
+button {
+  border-color: transparent;
+}
+
+.funded, .backers, .days2go {
+  margin-left: 7px;
+  margin-bottom: 5px;
+}
+
+ /*SECTION 2: FUNDERS GALLERY*/
+
+.holder-div{
+  padding: inherit;
+}
+
+/*SECTION 3: PROJECTS BOX STYLING*/
+
+
+.discover-title h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#navcontainer ul {
+  margin-left: 60px;
+  padding: 0;
+  color: white;
+}
+
+#navcontainer ul li { 
+  display: inline; 
+}
+
+#prj-text {
+  height: 90px;
+  overflow: hidden;
+  color: black;
+}
+
+
+.discover-title h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.row.projects-top {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.row.projects-bottom {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+
+.project-title {
+  width: 100%; 
+  height: auto; 
+  padding: 5px 0px;
+  list-style: none;
+  margin-left: 0;
+  margin-top: 30px;
+  color: white;
+}
+
+ul.project-title {
+  margin-bottom: 0;
+}
+
+.project-title .li-title {
+  font-size: 34px;
+  color: white;
+}
+
+.project-title .li-subtitle {
+  font-size: 12px;
+  color: black;
+}
+
+.large-4.projects {
+  border: 0px;
+}
+
+.pricing-table {
+  padding: 20px;
+  margin-bottom: 0px;
+  border: 0px;
+  background-color: lightGreen;
+}
+
+:hover.pricing-table {
+  background-color: rgb(218, 239, 183);
+  transition:background .5s ease-out, background .3s ease-in;
+}
+
+.pricing-table .cta-button {
+  background-color: transparent;
+  text-align: center;
+  padding: 1.25rem 1.25rem 0;
+}
+
+/*SECTION 4 SOCIAL BAKING*/
+.holder-div {
+  width: 100%;
+  height: 300px;
+  background-color: solid black;
+}
+
+.holder-div h2 {
+  margin-top: 50px;
+}
+
+
+/*OVERLAY*/
+
+nav {
+  font-family: Raleway, Helevetica Neue, sans-serif;
+}
+
+.overlay {
+  background: #3E92CE;
+}
+
+#balance-wrapper {
+  /*background-color: lightGreen;*/
+  padding: 5px;
+  color: #2e2e2e;
+}
+
+#balance-text {
+  font-size: 24px;
+}
+
+#balance-box {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+ button#donate-1 {
+  background: transparent;
+  border-width: 3px;
+  border-color: #2e2e2e;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  border: solid;
+  color: black;
+  margin-top: 100px;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif ;
+}
+
+button hr {
+  border-color: black;
+}
+
+#balance-donate-pound {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+#balance-and {
+  font-size: 12px;
+}
+
+#balance-cta {
+  font-size: 16px;
+}
