@@ -1,4 +1,6 @@
-<%= link_to 'New Mission', new_project_path %>
+<% if current_company %>
+  <%= link_to 'New Mission', new_project_path %>
+<% end %>
 
 <% @projects.each do |prj| %>
   <h2>

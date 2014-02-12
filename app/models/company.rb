@@ -8,13 +8,8 @@ class Company < ActiveRecord::Base
   has_many :donations, through: :projects
   has_many :users, through: :donations
 
-  # before_create { self.user = create_ghost_user }
 
   private
-
-    # def create_ghost_user
-    #   User.create(email: self.email, password: self.password, password_confirmation: self.password_confirmation)
-    # end
 
     def self.auth auth, emailed_required
       credentials = {uid: auth[:uid], provider: auth[:provider]}
