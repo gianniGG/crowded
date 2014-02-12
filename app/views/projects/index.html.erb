@@ -2,12 +2,12 @@
 
 <% @projects.each do |prj| %>
   <h2>
-    Company: <%= prj.company.name %>
+    Company: <%= prj.company_id %>
     <h3>
       <%= link_to prj.name, project_path(prj) %>
     </h3>
     <h4>
-      Mission Statement: <%= prj.mission_statement %>
+      Mission Statement: <%= prj.headline %>
     </h4>
   </h2>
 <% end %>
