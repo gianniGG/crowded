@@ -7,6 +7,5 @@ class Project < ActiveRecord::Base
   before_create { self.name = name.downcase }
 
   validates :name, presence: true
-  validates :mission_statement, presence: true
 
 end

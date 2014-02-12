@@ -29,7 +29,7 @@ class ChargesController < ApplicationController
     if params[:user_id]
       @user = User.find(params[:user_id])
       @user.update(balance: (@user.balance + @amount))
-      redirect_to user_path(@userew)
+      redirect_to user_path(@user)
     end
 
   rescue Stripe::CardError => e

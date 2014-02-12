@@ -5,6 +5,9 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
+  <%= f.label :headline %>
+  <%= f.text_field :headline %>
+
   <div id="wistia-upload-widget" style="width: 200px; height: 30px;"></div>
   <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
   <script>
@@ -20,9 +23,6 @@
   </script>
   <br/>
   <br/>
-
-  <%= f.label :headline %>
-  <%= f.text_field :headline %>
   <%= f.hidden_field :hashed_id, :value => "" %>
   <%= f.submit :launch %>
 
