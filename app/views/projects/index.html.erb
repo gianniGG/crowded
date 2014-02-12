@@ -2,15 +2,23 @@
   <%= link_to 'New Mission', new_project_path %>
 <% end %>
 
-<% @projects.each do |prj| %>
-  <h2>
-    Company: <%= prj.company_id %>
-    <h3>
-      <%= link_to prj.name, project_path(prj) %>
-    </h3>
-    <h4>
-      Mission Statement: <%= prj.headline %>
-    </h4>
-  </h2>
+<%= form_for :project do |f| %>
+
+  <%= f.label :search %>
+  <%= f.text_field :search %>
+
 <% end %>
 
+<div class="proj-container">
+  <% @projects.each do |prj| %>
+    <h2>
+      Company: <%= prj.company_id %>
+      <h3>
+        <%= link_to prj.name, project_path(prj) %>
+      </h3>
+      <h4>
+        Mission Statement: <%= prj.headline %>
+      </h4>
+    </h2>
+  <% end %>
+</div>
