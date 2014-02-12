@@ -21,9 +21,9 @@ Rails.application.routes.draw do
   end
 
   resources :projects do
-    resources :charges
     member do
       get 'home'
+      get 'donate'
     end
   end
 

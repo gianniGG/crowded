@@ -4,6 +4,13 @@ class ProjectsController < ApplicationController
   def home
   end
 
+  def donate
+    @project = Project.find(params[:id])
+    @project.update(funds_raised: @project.funds_raised + 100)
+    flash[:notice] = "Donated £1.00 !"
+    redirect_to project_path(@project)
+  end
+
   def new
     @project = Project.new
   end

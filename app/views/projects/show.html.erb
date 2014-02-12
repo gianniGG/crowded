@@ -2,23 +2,9 @@
 
 <h2><%= @project.name %></h2>
 
-<!-- <form action="/charges/new" class="button_to" method="get">
-  <div>
-    <input value="Donate" type="submit">
-  </div>
-</form> -->
 <% if user_signed_in? %>
-  <%= form_tag project_charges_path(@project) do %>
-    <article>
-      <label class="amount">
-        Amount: £1.00
-      </label>
-    </article>
-
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="A month's subscription"
-            data-amount="100"></script>
+  <%= button_to donate_project_path(@project), method: :get do %>
+    Donate £1.00
   <% end %>
 <% end %>
 
