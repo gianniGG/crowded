@@ -49,9 +49,8 @@ class ProjectsController < ApplicationController
         headline: params[:project][:headline],
         hashed_id: params[:project][:hashed_id],
         funds_raised: params[:project][:funds_raised],
-        target: params[:project][:target],
         duration: params[:project][:duration],
         project_info: params[:project][:project_info],
-        company_id: params[:project][:company_id]}
+        company_id: current_company.id}
     end
 end

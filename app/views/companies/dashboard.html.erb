@@ -1,0 +1,11 @@
+<h3><%= @company.name %></h3>
+
+<% @company.projects.each do |prj| %>
+  <h3> <%= prj.name %> </h3>
+  <h4>
+    Funds Raised: £<%= prj.funds_raised %>
+    of
+    <%= prj.target %>
+  </h4>
+
+<% end %>
