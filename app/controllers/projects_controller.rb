@@ -34,6 +34,6 @@ class ProjectsController < ApplicationController
 
   private
     def project_params
-      {company: current_company, name: params[:project][:name], mission_statement: params[:project][:mission_statement], hashed_id: params[:project][:hashed_id]}
+      {company: current_company, name: params[:project][:name], headline: params[:project][:headline], hashed_id: params[:project][:hashed_id]}
     end
 end
