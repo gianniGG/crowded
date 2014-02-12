@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   respond_to :html, :json
 
   def home
+    @projects = Project.last(3)
   end
 
   def new

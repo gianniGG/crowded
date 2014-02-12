@@ -18,6 +18,8 @@ class ChargesController < ApplicationController
       :currency    => 'gbp'
     )
 
+    #THIS LOGIC HAS MOVED TO THE PROJEcT DONATE PATH
+    #SO THAT STRIPE IS BYPASSED NO CHARGE$ :)
     if params[:project_id]
       if current_user.funds < @amount
         flash[:alert] = "Insufficient funds in your account. Please add credit to your profile."

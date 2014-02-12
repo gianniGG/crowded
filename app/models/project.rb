@@ -8,4 +8,8 @@ class Project < ActiveRecord::Base
 
   validates :name, presence: true
 
+  def donations_total
+    donations.sum(:amount)
+  end
+
 end

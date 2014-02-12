@@ -21,10 +21,10 @@ Rails.application.routes.draw do
   end
 
   resources :projects do
-    resources :charges
     member do
-      get 'home'
+      'home'
     end
+    resources :donations
   end
 
   resources :users do
