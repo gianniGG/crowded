@@ -7,4 +7,7 @@ dispatcher = new WebSocketRails(window.location.host + '/websocket')
 channel = dispatcher.subscribe('donation')
 channel.bind 'new',(project) ->
   $(".amount_raised[data-id=#{project.id}]").text(project.funds_raised / 100.0)
+  $(".recent_donors[data-id=#{project.id}]").html(
+      "<ul><li>"
+    )
 

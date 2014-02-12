@@ -7,6 +7,13 @@
   </span>
 </h3>
 
+<ul class="recent_donors" data-id="<%= @project.id %>">
+  <% @project.recent_five.each do |usr| %>
+    <li> <%= usr %> </li>
+  <% end %>
+</ul>
+
+
 <% if user_signed_in? %>
   <%= button_to project_donations_path(@project, amount: 100), remote: true do %>
     Donate £1.00

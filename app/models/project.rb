@@ -12,4 +12,8 @@ class Project < ActiveRecord::Base
     donations.sum(:amount)
   end
 
+  def recent_five
+    donations.last(5).map(&:user).map(&:name)
+  end
+
 end
