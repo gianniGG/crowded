@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
     super
   end
 
+  def points
+    donations.sum(:points)
+  end
+
   private
     def self.auth auth, email_required
       credentials = {uid: auth[:uid], provider: auth[:provider] }

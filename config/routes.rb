@@ -4,13 +4,15 @@ Rails.application.routes.draw do
 
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
-
   devise_for :companies, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   resources :companies, except: [:destroy]
 
   resources :companies do
     resources :projects
+    member do
+      get 'dashboard'
+    end
   end
 
   resources :users do
@@ -22,7 +24,10 @@ Rails.application.routes.draw do
 
   resources :projects do
     member do
-      'home'
+      get 'home'
+    end
+    collection do
+      post 'search'
     end
     resources :donations
   end

@@ -26,8 +26,17 @@ class ProjectsController < ApplicationController
   def update
   end
 
+  def search
+    projects = Project.where('name ILIKE ?', "%#{params[:search]}%")
+    render json: { projects: projects }.to_json
+  end
+
   def index
-    respond_with(@projects = Project.all)
+    if params[:search]
+      @projects = Project.last #fix this
+    else
+      @projects = Project.last(100)
+    end
   end
 
   def show
