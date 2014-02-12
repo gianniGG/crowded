@@ -36,34 +36,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Submit your project</title>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,900,800,700,500,300,100,200' rel='stylesheet' type='text/css'>
-
-    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
-
-
-    <!-- LINK FOR THE PROGRESS BUTTON -->
     <%= stylesheet_link_tag "component" %>
-
     <%= stylesheet_link_tag "foundation" %>
     <%= stylesheet_link_tag "project-submit" %>
     <%= javascript_include_tag "modernizr.custom.js" %>
     <%= javascript_include_tag "modernizr.js" %>
-
+    <%= javascript_include_tag "application.js" %>
+    
 </head>
   <body>
-
-  <div class="page-container">
-
-
-
-         <div id="wistia-upload-widget" style="width: 200px; height: 30px;"></div>
-               <%= form_for @project do |f| %>
+    <div class="page-container">
+      <div id="wistia-upload-widget" style="width: 200px; height: 30px;"></div>
+        <%= form_for @project do |f| %>
       <div class="large-12 columns">
-        <div id="submit-title">
-          <h2>SUBMIT YOUR PROJECT</h2>
-        </div>
+      <div id="submit-title">
+        <h2>SUBMIT YOUR PROJECT</h2>
       </div>
+    </div>
 
-      <form>
+    <form>
       <div class="row">
         <div class="large-12 columns">
           <label>Name
@@ -76,7 +67,6 @@
           </label>
         </div>
       </div>
-
       <div class="row">
         <div class="large-6 columns">
           <label>Target
@@ -88,11 +78,7 @@
             <%= f.text_field :duration, placeholder: "Set a time limit for when you need the funds by" %>
           </label>
         </div>
-
-
       </div>
-
-
       <div class="row">
         <div class="large-12 columns">
           <label>Give a bit more information about your project
@@ -100,7 +86,6 @@
           </label>
         </div>
       </div>
-
       <div class="row">
         <div class="large-12 columns">
           <label>Give a bit more information about your company
@@ -108,37 +93,29 @@
           </label>
         </div>
       </div>
-      <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
-     <!-- THIS MUST BE SORTED OUT -->
-     <%= f.hidden_field :company_id, :value => "Fuckers are us" %>
+     <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
+     <%= f.hidden_field :company_id, :value => current_company.id %> 
      <%= f.submit :launch %>
     </form>
     <% end %>
-    </div> <!-- end of page container -->
+  </div> <!-- end of page container -->
+  <%= javascript_include_tag "foundation.min.js" %>
 
-
-    <%= javascript_include_tag "classie.js" %>
-    <%= javascript_include_tag "demo1.js" %>
-    <%= javascript_include_tag "foundation.min.js" %>
-
-    <script>
+   <script>
       $(document).foundation();
-    </script>
-<script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
-             <script>
-                   var widget1 = new wistia.UploadWidget({
-                           divId: 'wistia-upload-widget',
-                                 publicProjectId: 'tluer5qj30',
-                                       callbacks: {
-                                                 'uploadSuccess': function(jsonFile){
-                                                             $('#project_hashed_id').val(jsonFile['hashed_id']);
-                                                                     }
-                                                                           }
-                                                                               });
-                                                                                 </script>
-
-
-    <%= javascript_include_tag "progressButton.js" %>
+   </script>
+   <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
+   <script>
+      var widget1 = new wistia.UploadWidget({ 
+        divId: 'wistia-upload-widget', 
+          publicProjectId: 'tluer5qj30',
+            callbacks: {
+              'uploadSuccess': function(jsonFile){
+                $('#project_hashed_id').val(jsonFile['hashed_id']);
+              }
+            }
+     });
+   </script>
   </body>
 </html>
 
