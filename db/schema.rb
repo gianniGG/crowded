@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20140211191311) do
     t.string   "headline"
     t.string   "hashed_id"
     t.integer  "company_id"
-    t.integer  "funds_raised",     default: 0
+    t.integer  "funds_raised"
     t.integer  "target"
     t.integer  "duration"
     t.text     "project_info"
@@ -90,6 +90,11 @@ ActiveRecord::Schema.define(version: 20140211191311) do
   end
 
   add_index "projects", ["company_id"], name: "index_projects_on_company_id", using: :btree
+
+  create_table "projects_users", id: false, force: true do |t|
+    t.integer "project_id", null: false
+    t.integer "user_id",    null: false
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
