@@ -5,10 +5,7 @@ Rails.application.routes.draw do
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
-  devise_for :companies, controllers: { omniauth_callbacks: "omniauth_callbacks" } do
-    match 'sign_in', to: 'companies#new', via: 'get'
-    match 'sign_up', to: 'companies#new', via: 'get'
-  end
+  devise_for :companies, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   resources :companies, except: [:destroy]
 

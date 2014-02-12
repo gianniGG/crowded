@@ -33,6 +33,7 @@ class ChargesController < ApplicationController
     if params[:user_id]
       @user = User.find(params[:user_id])
       @user.update(balance: (@user.balance + @amount))
+      flash[:notice] = "£#{@amount/100} added."
       redirect_to user_path(@user)
     end
 
