@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
   devise_for :companies, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   resources :companies, except: [:destroy]

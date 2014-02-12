@@ -12,10 +12,6 @@ class User < ActiveRecord::Base
     super
   end
 
-  def ghost?
-    company.exists?
-  end
-
   private
     def self.auth auth, email_required
       credentials = {uid: auth[:uid], provider: auth[:provider] }

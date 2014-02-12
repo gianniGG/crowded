@@ -4,14 +4,13 @@ class OmniauthCallbacksController < ApplicationController
     if session[:company_signup]
       company = Company.auth request.env["omniauth.auth"], email_required
       sign_in(company, scope: :company)
-
       session[:company_signup] = false
     else
       user = User.auth request.env["omniauth.auth"], email_required
       sign_in(user)
     end
 
-    redirect_to current_user || current_company
+    redirect_to current_company || current_user
   rescue ActiveRecord::RecordNotUnique
     flash[:alert] = 'User already exists with that email'
     redirect_to '/'
