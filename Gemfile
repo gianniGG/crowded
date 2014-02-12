@@ -37,6 +37,7 @@ gem 'omniauth-linkedin'
 
 gem 'pusher'
 gem 'thin'
+gem 'websocket-rails'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
