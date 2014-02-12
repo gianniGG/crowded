@@ -41,6 +41,7 @@ class ProjectsController < ApplicationController
 
   def show
     respond_with(@project = Project.find(params[:id]))
+    render :layout => false
   end
 
   private
