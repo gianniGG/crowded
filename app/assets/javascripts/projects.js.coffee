@@ -16,8 +16,9 @@ $ ->
   $('#project_search').on 'keyup', ->
     $('.proj-container').html('<div></div>')
     $.post('/projects/search', {search: $(this).val() }, (projects) ->
-      console.log projects
       for proj in projects.projects
-        console.log('hi')
-        $('.proj-container').append("<p>" + proj.name + "</p>")
+        $('.proj-container').append("<h3>" + proj.name +
+        "<h4> Headline: " + proj.headline + "</h4>" +
+        "<h4> Raised: £" + proj.funds_raised/100 + "</h4>"
+        "</h3>")
     )
