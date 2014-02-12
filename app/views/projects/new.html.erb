@@ -5,6 +5,9 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
+  <%= f.label :headline %>
+  <%= f.text_field :headline %>
+
   <div id="wistia-upload-widget" style="width: 200px; height: 30px;"></div>
   <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
   <script>
@@ -21,9 +24,121 @@
   <br/>
   <br/>
 
-  <%= f.label :headline %>
-  <%= f.text_field :headline %>
   <%= f.hidden_field :hashed_id, :value => "" %>
   <%= f.submit :launch %>
 
 <% end %>
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit your project</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,900,800,700,500,300,100,200' rel='stylesheet' type='text/css'>
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+
+
+    <!-- LINK FOR THE PROGRESS BUTTON -->
+    <%= stylesheet_link_tag "component" %>
+
+    <%= stylesheet_link_tag "foundation" %>
+    <%= stylesheet_link_tag "project-submit" %>
+    <%= javascript_include_tag "modernizr.custom.js" %>
+    <%= javascript_include_tag "modernizr.js" %>
+
+</head>
+  <body>
+
+  <div class="page-container">
+
+
+
+         <div id="wistia-upload-widget" style="width: 200px; height: 30px;"></div>
+               <%= form_for @project do |f| %>
+      <div class="large-12 columns">
+        <div id="submit-title">
+          <h2>SUBMIT YOUR PROJECT</h2>
+        </div>
+      </div>
+
+      <form>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Name
+            <%= f.text_field :name, placeholder: "Project Name" %>
+          </label>
+        </div>
+        <div class="large-12 columns">
+          <label>Headline
+            <%= f.text_field :headline, placeholder: "Brief Description of the project (max 100 characters)" %>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+          <label>Target
+            <%= f.text_field :target, placeholder: "Amount you wish to raise in £s" %>
+          </label>
+        </div>
+        <div class="large-6 columns">
+          <label>Duration
+            <%= f.text_field :duration, placeholder: "Set a time limit for when you need the funds by" %>
+          </label>
+        </div>
+
+
+      </div>
+
+
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Give a bit more information about your project
+            <%= f.text_field :project_info, placeholder: "Why does this project matter?" %>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Give a bit more information about your company
+            <%= f.text_field :company_info, placeholder: "Why are you guys the people to do it?" %>
+          </label>
+        </div>
+      </div>
+      <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
+     <!-- THIS MUST BE SORTED OUT -->
+     <%= f.hidden_field :company_id, :value => "Fuckers are us" %>
+     <%= f.submit :launch %>
+    </form>
+    <% end %>
+    </div> <!-- end of page container -->
+
+
+    <%= javascript_include_tag "classie.js" %>
+    <%= javascript_include_tag "demo1.js" %>
+    <%= javascript_include_tag "foundation.min.js" %>
+
+    <script>
+      $(document).foundation();
+    </script>
+<script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
+             <script>
+                   var widget1 = new wistia.UploadWidget({
+                           divId: 'wistia-upload-widget',
+                                 publicProjectId: 'tluer5qj30',
+                                       callbacks: {
+                                                 'uploadSuccess': function(jsonFile){
+                                                             $('#project_hashed_id').val(jsonFile['hashed_id']);
+                                                                     }
+                                                                           }
+                                                                               });
+                                                                                 </script>
+
+
+    <%= javascript_include_tag "progressButton.js" %>
+  </body>
+</html>
+

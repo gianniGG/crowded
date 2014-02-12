@@ -7,6 +7,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    render :layout => false
   end
 
   def create
@@ -35,6 +36,13 @@ class ProjectsController < ApplicationController
 
   private
     def project_params
-      {company: current_company, name: params[:project][:name], headline: params[:project][:headline], hashed_id: params[:project][:hashed_id]}
+      {company: current_company, name: params[:project][:name],
+        headline: params[:project][:headline],
+        hashed_id: params[:project][:hashed_id],
+        funds_raised: params[:project][:funds_raised],
+        target: params[:project][:target],
+        duration: params[:project][:duration],
+        project_info: params[:project][:project_info],
+        company_id: params[:project][:company_id]}
     end
 end
