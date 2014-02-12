@@ -22,9 +22,9 @@ Rails.application.routes.draw do
 
   resources :projects do
     member do
-      get 'home'
-      get 'donate'
+      'home'
     end
+    resources :donations
   end
 
   resources :users do

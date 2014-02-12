@@ -2,13 +2,7 @@ class ProjectsController < ApplicationController
   respond_to :html, :json
 
   def home
-  end
-
-  def donate
-    @project = Project.find(params[:id])
-    @project.update(funds_raised: @project.funds_raised + 100)
-    flash[:notice] = "Donated £1.00 !"
-    redirect_to project_path(@project)
+    @projects = Project.last(3)
   end
 
   def new
