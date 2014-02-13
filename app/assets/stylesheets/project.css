@@ -47,7 +47,8 @@ input[type="text"] {
 }
 
 #block1-bg {
-  background-color: #3CB371;
+  background-color: rgba(131, 176, 103, 0.82);
+
 }
 
 #block1-bg .columns {
@@ -60,7 +61,7 @@ input[type="text"] {
 }
 
 #block3-bg {
-  background-color: #3CB371;
+  background-color: rgba(131, 176, 103, 0.82);
   padding-bottom: 100px;
 }
 
@@ -121,7 +122,7 @@ hr {
 .make-it-happen-btn {
   width: 88%;
   height: 135px;
-  background-color: #EFEF70;
+  background-color: #C85D5D;
   border-width: 2px;
   border-color: black;
   border-radius: 2px;
@@ -146,7 +147,7 @@ hr {
 }
 
 :hover.make-it-happen-btn {
-  background-color: rgb(240, 170, 100);
+  background-color: #BA4C4C;
   transition:background 2s ease-out, background .3s ease-in;
 }
 
@@ -214,7 +215,7 @@ button {
 }
 
 #portal.large-12.columns.portal {
-  background-color: #2C8261;
+  background-color: rgba(62, 120, 98, 0.63);
   font-size: 16px;
   height: auto;
   text-align: left;
@@ -225,7 +226,7 @@ button {
 }
 
 #portal2.large-12.columns.portal {
-  background-color: #2C8261;
+  background-color: rgba(62, 120, 98, 0.63);
   font-size: 16px;
   height: auto;
   text-align: left;
@@ -262,6 +263,26 @@ button {
 .holder-div h2 {
   margin-top: 50px;
 }
+
+#block2-bg h1 {
+font-family: "Raleway";
+font-weight: 600;
+text-align: center;
+color: rgba(222, 23, 23, 0.7);
+font-size: 35px;
+margin-top: 20px;
+border-bottom: 1px solid;
+}
+
+#block2-bg {
+  height: 500px; 
+}
+
+.block2 h1 img {
+max-width: 8%;
+padding-bottom: 29px;
+}
+
 
 /*SECTION 3: PROJECTS BOX STYLING*/
 
@@ -347,7 +368,7 @@ ul.project-title {
   padding: 20px;
   margin-bottom: 0px;
   border: 0px;
-  background-color: #66E486;
+  background-color: rgba(62, 120, 98, 0.63);
   transition:background .5s ease-out, background .3s ease-in;
 }
 
@@ -358,7 +379,7 @@ ul.project-title {
 }
 
 :hover.pricing-table {
-  background-color: #9FEBB2;
+  background-color: rgba(62, 120, 98, 0.90);
 }
 
 .pricing-table .cta-button {
@@ -366,6 +387,11 @@ ul.project-title {
   text-align: center;
   padding: 1.25rem 1.25rem 0;
 }
+
+.cta-button a.button {
+  background-color: #96D495;
+}
+
 
 /*SECTION 4 SOCIAL BAKING*/
 

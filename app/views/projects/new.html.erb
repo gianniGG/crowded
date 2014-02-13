@@ -15,9 +15,17 @@
 </head>
   <body>
     <div class="page-container">
-        <%= form_for @project do |f| %>
+
     <div class="row projectform">
+        <div class="large-12 columns leaf">
+          <%= image_tag "crowdleafgrey.png" %>
+        </div>
+    </div>
+
+    <div class="row projectform">
+        <%= form_for @project do |f| %>
         <div class="large-12 columns">
+
         <div id="submit-title">
           <h2>SUBMIT YOUR PROJECT</h2>
           <div class="large-12 columns">
@@ -74,7 +82,7 @@
          <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
          <%= f.hidden_field :company_id, :value => current_company.id %> 
          <%= f.hidden_field :thumbnail, :value => "", :id => "project_thumbnail" %>
-         <%= f.button :launch %>
+         <%= f.button :Launch %>
             </div>
          </div>
        </div>
