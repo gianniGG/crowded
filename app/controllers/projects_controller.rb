@@ -53,9 +53,9 @@ class ProjectsController < ApplicationController
       {company: current_company, name: params[:project][:name],
         headline: params[:project][:headline],
         hashed_id: params[:project][:hashed_id],
-        funds_raised: params[:project][:funds_raised],
         duration: params[:project][:duration],
         project_info: params[:project][:project_info],
-        company_id: current_company.id}
+        company_id: current_company.id,
+        thumbnail: params[:project][:thumbnail]}
     end
 end
