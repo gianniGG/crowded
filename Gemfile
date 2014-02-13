@@ -41,6 +41,8 @@ gem 'websocket-rails'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+gem 'newrelic_rpm'
+
 #javascripty stuff
 gem 'ejs'
 gem 'js-routes'
