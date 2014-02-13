@@ -1,0 +1,29 @@
+.demo2 {
+margin-top: -3%;
+float:left;
+clear:both;
+width: 100%;
+height:400px;
+overflow:hidden;
+position:relative;
+}
+
+.demo2 .inside {
+position:absolute;
+top:40%;
+left:0;
+height:100px;
+margin-top:-50px;
+}
+
+.demo2 a {
+display:block;
+position:absolute;
+width:120px;
+height:120px;
+overflow:hidden;
+-moz-border-radius:120px;
+-webkit-border-radius:120px;
+border-radius:120px;
+
+}

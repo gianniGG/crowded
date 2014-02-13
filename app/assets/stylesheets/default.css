@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Merienda+One);
+
+/* ------ general
+-----------------------------------------------*/
+
+
+
+
+#content {
+margin:50px auto 0;
+width:1000px;
+}
+
+#content.absolute {
+position:absolute;
+top:50%;
+left:50%;
+width:600px;
+height:300px;
+margin:-150px 0 0 -300px;
+}
+
+
+.demo {
+text-align:center;
+float:left;
+clear:both;
+width:100%;
+}
+
+.demo a {
+margin-right:15px;
+}
+
+.absolute .demo {
+margin-bottom:20px;
+}
+
+
+
+
+
+.scroller .active {
+z-index:5 !important;
+}
+
+a {
+color:#222;
+text-decoration:none;
+}

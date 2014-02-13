@@ -1,0 +1,186 @@
+nav.top-bar {
+	height: 71px;
+	background-color: white;
+}
+
+.top-bar-section ul li > a.button.alert {
+background-color: rgba(131, 176, 103, 0.89);
+border-color: #9e0c0f;
+color: white;
+font-size: 15px;
+
+}
+.button.alert:hover, .button.alert:focus {
+background-color: #43D769;
+}
+
+
+
+.name a {
+  padding-left: 260px;
+  padding-top: 8px;
+  display: inline-block;
+}
+.name a img {
+  width: 200px;
+}
+
+.top-bar-section ul {
+	padding-right: 80px;
+	padding-top: 20px;
+}
+
+.top-bar-section ul, .top-bar-section li:not(.has-form) a:not(.button) {
+	background: none;
+	color: black;
+}
+
+.top-bar-section ul li > a {
+display: block;
+width: 100%;
+color: black;
+padding-left: 15px;
+font-family: "Raleway";
+font-weight: 900;
+font-size: 18px;
+font-weight: normal;
+}
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+background: white; }
+.top-bar-section ul li > a.button.alert:hover {
+background: #43D769;
+}
+
+
+#twitter-widget-0 {
+	width: 100%;
+}
+.block1 {
+height:700px;
+}
+
+.small-6 {
+margin-top: 8%;
+position: relative;
+width: 100%;
+height: 700px;
+
+padding: 20px;
+
+}
+
+
+.user {
+
+margin-left: -300px;	
+width:200px;
+height:200px;
+opacity: 0.2;
+border-radius:100px;
+background-size: 100% auto;
+background-color: rgba(131, 176, 103, 0.89);
+position:absolute;
+background-image:url('../img/profile.png');
+background-repeat: no-repeat;
+
+}
+
+.title h1 {
+	position:absolute;
+	margin-left: 210px;
+	margin-bottom: -60px;
+	font-family: "Raleway";
+	font-weight: 700;
+	font-size: 10px;
+	opacity:0;
+	white-space: nowrap;
+}
+.content {
+	position: absolute;
+	margin-bottom: -100px;
+	padding: 20px;
+	width: 200px;
+	font-family: "Raleway";
+	font-weight: 100;
+	border-left: 1px solid grey;
+}
+
+.content h2 {
+	font-size: 25px;
+	line-height: 1.3;
+
+}
+
+.content h3 {
+	font-size: 20px;
+
+
+}
+
+.content p {
+	font-size: 15px;
+	line-height: 0.3;
+}
+
+
+ .links a {
+ display: inline-block;
+ padding-right: 10px;
+ padding-top:10px;
+
+ }
+
+.invest {
+width: 628px;
+height: 400px;
+padding: 10px;
+margin-top: 139px;
+margin-left: 227px;
+}
+
+.search{
+width: 568px;
+height: 100px;
+padding: 10px;
+margin-top: 29px;
+margin-left: 230px;
+
+}
+
+.history {
+	height: 200px;
+}
+
+.button.expand {
+padding-right: 0;
+padding-left: 0;
+width: 46%;
+}
+
+.button.searchbtn {
+	padding-top: 9px;
+}
+
+a.alert.button.expand {
+	background-color: rgba(131, 176, 103, 0.89);
+	height:37px;
+}
+
+.small-6.large-centered.columns {
+	overflow: hidden;
+
+}
+
+a.alert.button.expand:hover {
+background: #43D769;}
+
+#block1 {
+	
+}
+
+
+
+
+
+
+

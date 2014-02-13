@@ -1,17 +1,113 @@
-<%= image_tag @user.profile_picture, class: 'profile-pic' %>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="fixed">
+      <nav class="top-bar" data-topbar>
+       <ul class="title-area">
+          <li class="name">
+            <a href="index.html#"> <img src="img/crowdlogo.png" alt="crowdded logo"> </a>
+          </li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li>
+              <a href="#" class="alert button">Discover Projects</a>
+            </li>
+            <li class="active"><a href="#"><i class="fa fa-cog fa-fw"></i>  log out</a>
+            </li>
 
-<!-- Stripe -->
-<%= form_tag user_charges_path(@user) do %>
+          </ul>
+        </section>
+      </nav>
+    </div>
 
-<h3> Points: </h3>
+    <div id="block1">
+      <div class="row block1">
+        <div class="small-6 large-centered columns">
+          
+              <div class="user" >
+                <%= image_tag @user.profile_picture, class: 'profile-pic' %>
+              </div>
+              <div class="title">
+                <h1> Welcome User </h1>
+              </div>
+              <div class="content">
+                <h2> Username </h2>
+ <h3> Points: </h3>
   <span class="user_points" data-id="<%= @user.id %>">
     <%= @user.points %>
   </span>
 </h3>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="100" data-label="Credit My Account"></script>
-<% end %>
+                <h3> Balance : </h3>
+                <a href="#" class="button [radius round]">Top up</a>
+                <%= form_tag user_charges_path(@user) do %>
 
+                   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                   data-description="A month's subscription"
+                   data-amount="100" data-label="Credit My Account"></script>
+                <% end %>
+                <h3> Projects : </h3>
+
+                
+                
+                <div class="links">
+                   
+                  <a class="social" href="http://twitter.com/crowdded" style="text-decoration:none" target="_blank">
+                  <i class="fa fa-twitter fa-lg "></i></a>
+                  <a class="face" href="http://facebook.com/anath.abensour" style="text-decoration:none" target="_blank">
+                  <i class="fa fa-facebook fa-lg"></i></a>
+                  <a class="linkedin" href="http://linkedin.com/" style="text-decoration:none" target="_blank">
+                  <i class="fa fa-linkedin fa-lg "></i></a>
+               </div>
+             
+           </div>
+              <div class="invest">
+                <a class="twitter-timeline" width="600" height="400" href="https://twitter.com/ggHankyChief" data-dnt=true data-widget-id="423030494620438528">Tweets by @ggHankyChief</a>
+
+
+                                
+              </div>
+             <div class="search">
+              <div class="row collapse">
+                <div class="large-8 small-9 columns">
+                  <input type="text" placeholder="Find other project">
+                </div>
+                <div class="large-4 small-3 columns">
+                  <a href="#" class="alert button expand searchbtn"><i class="fa fa-search"></i></a>
+                </div>
+              </div>   
+             </div>
+             
+                         
+        </div>
+      </div>
+    </div>
+    
+   <footer>@Jame/Tom/Gianni/Giacomo/Anath</footer>
+
+
+
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+$(".user").animate({left:'300px',opacity:'2'}, 500, 'linear');
+setTimeout(function() {
+  $("h1").animate({top:'60px',fontSize:'70px',opacity:'2'}, 1000, 'linear');
+}, 200);
+
+$(".content").animate({bottom:'320'}, 1000, 'linear');
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
