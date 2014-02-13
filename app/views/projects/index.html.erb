@@ -11,13 +11,13 @@
           <%= form_for :project do |f| %>
 
             <%= f.text_field :search, placeholder: "Search.."%>
-              
-              
+
+
 
 
           <% end %>
 
-          
+
 
           <div class="proj-container">
             <% if @projects %>
@@ -29,14 +29,9 @@
                   <h4>
                     Mission: <%= prj.headline %>
                   </h4>
-                  <h4> 
-                    Raised: £ 
-                    <% if prj.funds %>
-                      <%= prj.funds /  100 %> 
-                    <% else %>
-                      0
-                    <% end %>
-                    of <%= prj.target %>
+                  <h4>
+                    Raised: £
+                    <%= prj.funds_raised /  100 %> of <%= prj.target %>
                   </h4>
                 </div>
               <% end %>

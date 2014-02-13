@@ -52,7 +52,7 @@ input[type="text"] {
 
 #block1-bg .columns {
   padding-left: 0;
-  padding-right: 0;  
+  padding-right: 0;
 }
 
 #block2-bg {
@@ -278,7 +278,7 @@ button {
   font-size: 0;
 }
 
-#navcontainer ul li { 
+#navcontainer ul li {
   display: inline-block;
   width: 33.3%;
   text-align: center;
@@ -316,8 +316,8 @@ button {
 }
 
 .project-title {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
   padding: 5px 0px;
   list-style: none;
   margin-left: 0;
@@ -460,33 +460,19 @@ button hr {
 
 .project-box h3 {
   font-family:'Raleway';
-  font-weight: 500; 
+  font-weight: 500;
 }
 .project-box h4 {
   font-family:'Raleway';
-  font-weight: 100; 
+  font-weight: 100;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.recent-donor-li {
+  list-style-type: none;
+  border: 2px solid green;
+  border-radius: 5px;
+  width: 50%;
+  padding: 1%;
+  margin: 1%;
+}

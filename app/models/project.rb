@@ -13,7 +13,7 @@ class Project < ActiveRecord::Base
   end
 
   def recent_five
-    donations.last(5).map(&:user).map(&:name)
+    donations.last(5)
   end
 
 end
