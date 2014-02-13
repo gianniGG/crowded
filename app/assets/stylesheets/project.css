@@ -374,26 +374,10 @@ background-color:rgba(33, 57, 142, 0.68);
 height:230px;
 }
 
-.fa-check-circle:before {
-content: "\f058";
-color: rgba(25, 23, 23, 0.65);
-}
-
-.fa-group:before, .fa-users:before {
-content: "\f0c0";
-color: rgba(25, 23, 23, 0.65);
-}
-
-.fa-fw {
-width: 1.2857142857142858em;
-text-align: center;
-color:rgba(25, 23, 23, 0.65);
-}
 
 .fa-5x {
-font-size: 20em;
-padding-left: 90px;
-padding-top: 70px;
+font-size: 6em;
+padding-left: 103px;
 padding-right: 15px;
 color:white;
 }
