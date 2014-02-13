@@ -2,13 +2,18 @@
 <html class="no-js" lang="en">
   <head>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <%= stylesheet_link_tag "foundation" %>
+    <%= stylesheet_link_tag "main2" %>
+    <%= stylesheet_link_tag "demo" %>
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "fallback" %>
   </head>
   <body>
   <div class="fixed">
       <nav class="top-bar" data-topbar>
        <ul class="title-area">
           <li class="name">
-            <a href="index.html#"> <img src="img/crowdlogo.png" alt="crowdded logo"> </a>
+          <a href="index.html#"><%= image_tag "crowdlogo.png" %></a>
           </li>
         </ul>
         <section class="top-bar-section">
@@ -109,5 +114,6 @@ $(".content").animate({bottom:'320'}, 1000, 'linear');
 
 
     </script>
+    <%= javascript_include_tag "jquery", "foundation.min.js" %>
   </body>
 </html>
