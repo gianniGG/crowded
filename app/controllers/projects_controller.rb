@@ -35,6 +35,7 @@ class ProjectsController < ApplicationController
   def index
     if params[:search]
       @projects = Project.last #fix this
+      raise "fuck"
     else
       @projects = Project.last(100)
     end
