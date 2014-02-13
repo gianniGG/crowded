@@ -1,5 +1,5 @@
 body {
-  background-color: #91ED7C;
+background-color: rgba(131, 176, 103, 0.82);
 }
 
 body, h1, h2, h3, h4, h5, h6, p, div, label, form {
@@ -18,12 +18,21 @@ body, h1, h2, h3, h4, h5, h6, p, div, label, form {
 
 #submit-title h2 {
   font-weight: 700;
+  color: #353535;
+}
+
+img {
+  width: 10%;
+}
+
+.large-12.columns.leaf {
+  text-align: center;
 }
 
 label {
   font-size: 20px;
   padding-bottom: 5px;
-  color: #222222;
+  color: #353535;
 }
 
 #vid-btn {
@@ -32,6 +41,10 @@ label {
   margin-right: auto;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+#launch-btn button {
+  background-color: rgba(62, 120, 98, 0.63);
 }
 
 .row.projectform {
