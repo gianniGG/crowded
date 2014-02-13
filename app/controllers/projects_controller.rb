@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   respond_to :html, :json
 
   def home
+    render layout: false
     @projects = Project.last(3)
   end
 
@@ -34,6 +35,7 @@ class ProjectsController < ApplicationController
   def index
     if params[:search]
       @projects = Project.last #fix this
+      raise "fuck"
     else
       @projects = Project.last(100)
     end
@@ -55,6 +57,7 @@ class ProjectsController < ApplicationController
         company_info: params[:project][:company_info],
         duration: params[:project][:duration],
         project_info: params[:project][:project_info],
-        company_id: current_company.id}
+        company_id: current_company.id,
+        thumbnail: params[:project][:thumbnail]}
     end
 end

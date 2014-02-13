@@ -67,15 +67,17 @@
           </label>
         </div>
       </div>
-      <div class="row projectform">
-        <div class="large-12 columns">
-          <div id="launch-btn" style="text-align:center;">
-       <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
-       <%= f.hidden_field :company_id, :value => current_company.id %> 
-       <%= f.button :launch %>
-          </div>
+
+        <div class="row projectform">
+          <div class="large-12 columns">
+            <div id="launch-btn" style="text-align:center;">
+         <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
+         <%= f.hidden_field :company_id, :value => current_company.id %> 
+         <%= f.hidden_field :thumbnail, :value => "", :id => "project_thumbnail" %>
+         <%= f.button :launch %>
+            </div>
+         </div>
        </div>
-     </div>
     </form>
     <% end %>
   </div> <!-- end of page container -->
@@ -92,6 +94,7 @@
             callbacks: {
               'uploadSuccess': function(jsonFile){
                 $('#project_hashed_id').val(jsonFile['hashed_id']);
+                $('#project_thumbnail').val(jsonFile['thumbnail']['url']);
               }
             }
      });

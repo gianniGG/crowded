@@ -1,24 +1,32 @@
-<% if current_company %>
-  <%= link_to 'New Mission', new_project_path %>
-<% end %>
+<body>
+<%= render "shared/header" %>
 
-<%= form_for :project do |f| %>
-
-  <%= f.label :search %>
-  <%= f.text_field :search %>
-
-<% end %>
-
-<div class="proj-container">
-  <% @projects.each do |prj| %>
-    <h2>
-      Company: <%= prj.company_id %>
-      <h3>
-        <%= link_to prj.name, project_path(prj) %>
-      </h3>
-      <h4>
-        Mission Statement: <%= prj.headline %>
-      </h4>
-    </h2>
+<div class="body">
+  <% if current_company %>
+    <%= link_to 'New Mission', new_project_path %>
   <% end %>
+
+  <%= form_for :project do |f| %>
+
+    <%= f.label :search %>
+    <%= f.text_field :search %>
+
+  <% end %>
+
+  <div class="proj-container">
+    <% if @projects %>
+      <% @projects.each do |prj| %>
+        <h2>
+          Company: <%= prj.company_id %>
+          <h3>
+            <%= link_to prj.name, project_path(prj) %>
+          </h3>
+          <h4>
+            Mission Statement: <%= prj.headline %>
+          </h4>
+        </h2>
+      <% end %>
+    <% end %>
+  </div>
+  
 </div>
