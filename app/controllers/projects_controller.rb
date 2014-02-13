@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    render layout: false
+    # render layout: false
     @project = Project.find(params[:id])
     respond_with @project do |format|
       format.html { render :layout => false }

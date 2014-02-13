@@ -5,13 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= stylesheet_link_tag "foundation.css" %> 
     <%= stylesheet_link_tag "project.css" %> 
     <%= stylesheet_link_tag "style1.css" %> 
+    <%= stylesheet_link_tag "demo2.css" %>
 
     <%= javascript_include_tag "modernizr.js" %>
     <%= javascript_include_tag "modernizr.custom.js" %>
@@ -19,9 +20,8 @@
 
     <%= stylesheet_link_tag "main1.css" %>
     <%= stylesheet_link_tag "style.css" %>
-   
-   
-   
+
+
   </head>
   <body>
     <%= render "shared/header" %>
@@ -30,7 +30,7 @@
     <div id="block1-bg">
 
         <div class="row">
-          
+
           <div class="large-12 columns">
             <ul class="project-title">
               <li class="li-title"><h1><%= @project.name %></h1></li>
@@ -53,6 +53,19 @@
           </div> <!-- large-12 columns -->
         </div>  <!-- end row -->
 
+        <div class="row">
+
+          <div class="recent_donors" data-id="<%= @project.id %>">
+            <ul>
+              <% @project.recent_five.reverse.each do |donation| %>
+                <li class="recent-donor-li">
+                  <%= donation.user.name %> gave £1.00 <%= "#{time_ago_in_words(donation.created_at)}"  %> ago!
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+
         <div class='row' style="padding: 10px 5px 0px 10px;">
           <div class="large-8 medium-12 columns wistia">
             <div id="wistia_72ptjwixw3" data-video-width="640" data-video-height="360">
@@ -65,7 +78,7 @@
             <button id="trigger-overlay" class="make-it-happen-btn">
               <h2>MAKE IT<br/>HAPPEN</h2>
             </button>
-<!-- 
+<!--
             <% if company_signed_in? %>
               <h3> You are signed in as a Company</h3>
               <h3> Sign in as a User to make a donation</h3>
@@ -73,7 +86,7 @@
              -->
               <div class="overlay overlay-hugeinc">
                 <button type="button" class="overlay-close">Close</button>
-                
+
                 <nav id="balance-nav">
                     <ul id="balance-wrapper">
                       <li id="balance-text">YOUR BALANCE</li>
@@ -115,24 +128,68 @@
         </div> <!-- end row -->
 
       </div> <!-- end block1-bg -->
-     
+
 <!-- SECTION 2: FUNDERS GALLERY -->
-      
+
     <div id="block2-bg">
-      <div class="row block2">
-        <div class="large-12 columns block2">
-          <div class="holder-div">
-            <h2>MEET OTHER FUNDERS OF THIS PROJECT</h2>
 
+     <div class="row block2">
+        <div class="small-6 large-centered columns">
+          <h1><%= image_tag "crowdleaf.png"%> Meet the crowdd </h1>
+
+          <div class="scroller demo2">
+            
+            <div class="inside">
+              <a href="#"><%= image_tag "img1.jpg" %> </a>
+
+              <p> Jack Daniels </br>
+               35 years old </br>
+               Web developer </p>
+              <a href="#"><%= image_tag "img2.jpg" %> </a>
+              <p> Mick Jagger </br>
+               30 years old </br>
+               Rock band singer </p>
+              <a href="#"><%= image_tag "img3.jpg" %> </a>
+              <p> Beyonce </br>
+               32 years old </br>
+               Best dancer ever </p>
+              <a href="#"><%= image_tag "img4.jpg" %> </a>
+              <p> Melanie Fiord </br>
+               28 years old </br>
+               Graphic Designer </p>
+              <a href="#"><%= image_tag "img5.jpg" %> </a>
+              <p> Woddy Allen </br>
+               67 years old </br>
+               Jewish Film Maker </p>
+              <a href="#"><%= image_tag "img6.jpg" %> </a>
+              <p> Jean Paul Sartre </br>
+               110 years old </br>
+                Philosopher and Writer</p>
+              <a href="#"><%= image_tag "img7.jpg" %> </a>
+              <p> Jayz </br>
+               38 years old </br>
+              Rapper, Autor, Compositor</p>
+              <a href="#"><%= image_tag "img8.jpg" %> </a>
+              <p> Mark Zuckerberg </br>
+               30 years old </br>
+              Founder and CEO at Facebook</p>
+              <a href="#"><%= image_tag "img9.jpg" %> </a>
+              <p> Ariel Goldenblat </br>
+               42 years old </br>
+              Vincent Chase's movie agent</p>
+              <a href="#"><%= image_tag "img10.jpg"%> </a>
+              <p> Serge Gainsburg </br>
+               90 years old </br>
+              French singer, philosopher, writer, compositor</p>
               
-
+            </div>
           </div>
         </div>
       </div>
     </div> <!-- end block2-bg -->
 
 <!-- SECTION 3: DISCOVER PROJECTS -->
-          
+
     <div id="block3-bg">
       <div class="large-12 columns discover-title">
         <h2>FEATURED PROJECTS</h2>
@@ -162,9 +219,9 @@
                 </div>
               </li>
               <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
-            </ul>    
+            </ul>
         </div>
-        
+
         <div class="large-4 columns projects">
               <ul class="pricing-table" data-equalizer-watch>
                 <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
@@ -188,9 +245,9 @@
                   </div>
                 </li>
                 <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
-              </ul>    
-          </div>  
-              
+              </ul>
+          </div>
+
         <div class="large-4 columns projects">
               <ul class="pricing-table" data-equalizer-watch>
                 <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
@@ -214,12 +271,12 @@
                   </div>
                 </li>
                 <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
-              </ul>    
+              </ul>
           </div>
         </div>
 
       <div class="row projects-bottom" data-equalizer>
-              
+
         <div class="large-4 columns projects">
               <ul class="pricing-table" data-equalizer-watch>
                 <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
@@ -243,9 +300,9 @@
                   </div>
                 </li>
                 <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
-              </ul>    
+              </ul>
           </div>
-              
+
           <div class="large-4 columns projects">
                 <ul class="pricing-table" data-equalizer-watch>
                   <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
@@ -269,10 +326,10 @@
                     </div>
                   </li>
                   <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
-                </ul>    
+                </ul>
             </div>
 
-                
+
           <div class="large-4 columns projects">
                 <ul class="pricing-table" data-equalizer-watch>
                   <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
@@ -296,12 +353,12 @@
                     </div>
                   </li>
                   <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
-                </ul>    
+                </ul>
             </div>
 
       </div>
     </div> <!-- end of block3-bg -->
-    
+
 
 <!-- SECTION 4: SOCIAL BAKING -->
 
@@ -331,7 +388,7 @@
       container: "wistia_72ptjwixw3",
       videoFoam: true
       // videoWidth: 400,
-      // videoHeight: 338  
+      // videoHeight: 338
     });
     </script>
 
@@ -340,6 +397,10 @@
     <%= javascript_include_tag "foundation.min.js" %>
     <%= javascript_include_tag "classie.js" %>
     <%= javascript_include_tag "demo1.js" %>
+    <%= javascript_include_tag "jquery.easing.js" %>
+    <%= javascript_include_tag "scroller.js" %>
+    <%= javascript_include_tag "init.js" %>
+
 
     <script>
       $(document).ready(function() {
