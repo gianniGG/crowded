@@ -33,15 +33,11 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    if params[:search]
-      @projects = Project.last #fix this
-      raise "fuck"
-    else
-      @projects = Project.last(100)
-    end
+    @projects = Project.last(100)
   end
 
   def show
+    render layout: false
     @project = Project.find(params[:id])
     respond_with @project do |format|
       format.html { render :layout => false }

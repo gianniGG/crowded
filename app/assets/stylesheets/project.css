@@ -442,3 +442,51 @@ button hr {
 #balance-cta {
   font-size: 16px;
 }
+
+#project_search {
+        width: 30%;
+    margin-left: 16px;
+}
+
+.project-box {
+  border: 1px solid grey;
+  margin: 2%;
+  border-radius: 5px;
+  width: 50%;
+  padding: 2%;
+  background-color: rgba(131, 176, 103, 0.54);
+
+}
+
+.project-box h3 {
+  font-family:'Raleway';
+  font-weight: 500; 
+}
+.project-box h4 {
+  font-family:'Raleway';
+  font-weight: 100; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
