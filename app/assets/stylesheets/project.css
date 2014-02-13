@@ -18,13 +18,13 @@ font-weight: 500;
 }
 
 h4 {
-font-size: 18px;
-font-weight: 500;
+font-size: 16px;
+font-weight: 400;
 }
 
 h5 {
 font-size: 12px;
-font-weight: 200;
+font-weight: 300;
 }
 
 h6 {
@@ -46,64 +46,6 @@ input[type="text"] {
   height: 29px;
 }
 
-/*TOP SECTION: PROJECT OVERVIEW*/
-
-hr {
-  border: none;
-  height: 2px;
-  color: black;
-  background-color: black;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-#double {
-  width:700px;
-  margin-bottom: 20px;
-  margin-left: 0px;
-  overflow: hidden;
-  padding: 0;
-}
-
-#double li {
-  line-height: 1.3em;
-  float: left;
-  display: inline;
-  width: 33.333%;
-  color: black;
-}
-
-#double h2, h4 {
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-
-
-.row.portal {
-  padding-bottom: 100px;
-}
-
-#portal.large-12.columns.portal {
-  background-color: #42c883;
-  font-size: 16px;
-  height: auto;
-  text-align: left;
-  padding: 30px;
-  display: none;
-  color: #2e2e2e;
-}
-
-#portal2.large-12.columns.portal {
-  background-color: #42c883;
-  font-size: 16px;
-  height: auto;
-  text-align: left;
-  padding: 30px;
-  display: none;
-  color: #2e2e2e;
-}
-
-
 #block1-bg {
   background-color: #3CB371;
 }
@@ -114,7 +56,7 @@ hr {
 }
 
 #block2-bg {
-  background-color: white;
+  background-color: #FFFFE8;
 }
 
 #block3-bg {
@@ -123,7 +65,7 @@ hr {
 }
 
 #block4-bg {
-  background-color: white;
+  background-color: #FFFFE8;
 }
 
 .block2 h3 {
@@ -133,15 +75,53 @@ hr {
   color: black;
 }
 
-div.large-8.columns.wistia {
-  padding-left: 0 !important;
+/*TOP SECTION: PROJECT OVERVIEW*/
+hr {
+  border: none;
+  height: 2px;
+  color: black;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#double {
+  width:80%;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  overflow: hidden;
+  padding: 0;
 }
 
 
+@media(max-width: 1024px) {
+  #double {
+    width: 100%;
+  }
+}
+
+#double li {
+  line-height: 1.3em;
+  float: left;
+  display: inline;
+  width: 33.333%;
+  color: black;
+}
+
+
+#double li h2, .li-title h1 {
+  color: #FFFFE8;
+}
+
+#double h2, h4 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
 .make-it-happen-btn {
-  width: 290px;
+  width: 88%;
   height: 135px;
-  background-color: rgb(223, 220, 83);
+  background-color: #EFEF70;
   border-width: 2px;
   border-color: black;
   border-radius: 2px;
@@ -161,16 +141,24 @@ div.large-8.columns.wistia {
   padding-top: 0;
 }
 
+.make-it-happen-btn h2 {
+  margin-top: 20px;
+}
+
 :hover.make-it-happen-btn {
   background-color: rgb(240, 170, 100);
   transition:background 2s ease-out, background .3s ease-in;
 }
 
-#company-btn, #project-btn {
-  width: 290px;
+div.large-8.columns.wistia {
+  padding-left: 0 !important;
+}
+
+#project-btn, #company-btn {
+  width: 88%;
   height: 85px;
   background-color: transparent;
-  color: white;
+  color: #FFFFE8;
   font-size: 24px;
   margin-left: auto;
   margin-right: 5px;
@@ -184,6 +172,28 @@ div.large-8.columns.wistia {
   outline: none;
 }
 
+
+@media(max-width: 1024px) {
+  .make-it-happen-btn {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+}
+
+@media(max-width: 1024px) {
+  #project-btn, #company-btn {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+}
+
+#project-btn h3, #company-btn h3 {
+  color: #FFFFE8;
+}
+
 button {
   border-color: transparent;
 }
@@ -193,14 +203,67 @@ button {
   margin-bottom: 5px;
 }
 
+.row.portal {
+  padding-bottom: 100px;
+}
+
+#portal h2, #portal2 h2 {
+  text-align: center;
+  color: #FFFFE8;
+  margin-bottom: 20px;
+}
+
+#portal.large-12.columns.portal {
+  background-color: #2C8261;
+  font-size: 16px;
+  height: auto;
+  text-align: left;
+  padding: 30px;
+  display: none;
+  /*color: #2e2e2e;*/
+  color: #FFFFE8;
+}
+
+#portal2.large-12.columns.portal {
+  background-color: #2C8261;
+  font-size: 16px;
+  height: auto;
+  text-align: left;
+  padding: 30px;
+  display: none;
+  color: #FFFFE8;
+}
+
+@media(max-width: 640px) {
+  #portal p, #portal2 p {
+    font-size: 11px;
+  }
+}
+
+@media(max-width: 640px) {
+  #portal h2, #portal2 h2 {
+    font-size: 16px;
+  }
+}
+
  /*SECTION 2: FUNDERS GALLERY*/
 
-.holder-div{
+.holder-div {
   padding: inherit;
+  text-align: center;
+}
+
+.holder-div {
+  width: 100%;
+  height: 300px;
+  background-color: solid black;
+}
+
+.holder-div h2 {
+  margin-top: 50px;
 }
 
 /*SECTION 3: PROJECTS BOX STYLING*/
-
 
 .discover-title h2 {
   margin-top: 50px;
@@ -209,27 +272,37 @@ button {
 }
 
 #navcontainer ul {
-  margin-left: 60px;
+  margin: 0 33px;
   padding: 0;
-  color: white;
+  color: #FFFFE8;
+  font-size: 0;
 }
 
 #navcontainer ul li { 
-  display: inline; 
+  display: inline-block;
+  width: 33.3%;
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+}
+
+#navcontainer ul.definitions li {
+  font-size: 0.6rem;
+  margin-top: 10px;
 }
 
 #prj-text {
-  height: 90px;
+  height: 63px;
   overflow: hidden;
   color: black;
+  margin-bottom: 20px;
 }
-
 
 .discover-title h2 {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #FFFFE8;
 }
 
 .row.projects-top {
@@ -242,7 +315,6 @@ button {
   padding-bottom: 30px;
 }
 
-
 .project-title {
   width: 100%; 
   height: auto; 
@@ -250,7 +322,7 @@ button {
   list-style: none;
   margin-left: 0;
   margin-top: 30px;
-  color: white;
+  color: #FFFFE8;
 }
 
 ul.project-title {
@@ -259,7 +331,7 @@ ul.project-title {
 
 .project-title .li-title {
   font-size: 34px;
-  color: white;
+  color: #FFFFE8;
 }
 
 .project-title .li-subtitle {
@@ -275,12 +347,18 @@ ul.project-title {
   padding: 20px;
   margin-bottom: 0px;
   border: 0px;
-  background-color: lightGreen;
+  background-color: #66E486;
+  transition:background .5s ease-out, background .3s ease-in;
+}
+
+.pricing-table h4 {
+  margin-top: -15px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 :hover.pricing-table {
-  background-color: rgb(218, 239, 183);
-  transition:background .5s ease-out, background .3s ease-in;
+  background-color: #9FEBB2;
 }
 
 .pricing-table .cta-button {
@@ -290,19 +368,25 @@ ul.project-title {
 }
 
 /*SECTION 4 SOCIAL BAKING*/
-.holder-div {
-  width: 100%;
-  height: 300px;
-  background-color: solid black;
+
+#block4-bg {
+background-color:rgba(33, 57, 142, 0.68);
+height:230px;
 }
 
-.holder-div h2 {
-  margin-top: 50px;
+
+.fa-5x {
+font-size: 6em;
+padding-left: 103px;
+padding-right: 15px;
+color:white;
 }
 
+.fa-5x:hover {
+  opacity:0.4;
+}
 
 /*OVERLAY*/
-
 nav {
   font-family: Raleway, Helevetica Neue, sans-serif;
 }
@@ -311,8 +395,11 @@ nav {
   background: #3E92CE;
 }
 
+button.overlay-close {
+  background-color: transparent;
+}
+
 #balance-wrapper {
-  /*background-color: lightGreen;*/
   padding: 5px;
   color: #2e2e2e;
 }
@@ -326,7 +413,7 @@ nav {
   font-weight: 700;
 }
 
- button#donate-1 {
+ .button_to button {
   background: transparent;
   border-width: 3px;
   border-color: #2e2e2e;
@@ -355,3 +442,51 @@ button hr {
 #balance-cta {
   font-size: 16px;
 }
+
+#project_search {
+        width: 30%;
+    margin-left: 16px;
+}
+
+.project-box {
+  border: 1px solid grey;
+  margin: 2%;
+  border-radius: 5px;
+  width: 50%;
+  padding: 2%;
+  background-color: rgba(131, 176, 103, 0.54);
+
+}
+
+.project-box h3 {
+  font-family:'Raleway';
+  font-weight: 500; 
+}
+.project-box h4 {
+  font-family:'Raleway';
+  font-weight: 100; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

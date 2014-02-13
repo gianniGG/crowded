@@ -1,24 +1,48 @@
-<% if current_company %>
-  <%= link_to 'New Mission', new_project_path %>
-<% end %>
+<head>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<%= render "shared/header" %>
 
-<%= form_for :project do |f| %>
+<div class="body">
+  <div class="row block2">
+      <div class="small-6 large-centered columns">
 
-  <%= f.label :search %>
-  <%= f.text_field :search %>
+          <%= form_for :project do |f| %>
 
-<% end %>
+            <%= f.text_field :search, placeholder: "Search.."%>
+              
+              
 
-<div class="proj-container">
-  <% @projects.each do |prj| %>
-    <h2>
-      Company: <%= prj.company_id %>
-      <h3>
-        <%= link_to prj.name, project_path(prj) %>
-      </h3>
-      <h4>
-        Mission Statement: <%= prj.headline %>
-      </h4>
-    </h2>
-  <% end %>
+
+          <% end %>
+
+          
+
+          <div class="proj-container">
+            <% if @projects %>
+              <% @projects.each do |prj| %>
+                <div class='project-box'>
+                  <h3>
+                    <%= link_to prj.name, project_path(prj) %>
+                  </h3>
+                  <h4>
+                    Mission: <%= prj.headline %>
+                  </h4>
+                  <h4> 
+                    Raised: £ 
+                    <% if prj.funds %>
+                      <%= prj.funds /  100 %> 
+                    <% else %>
+                      0
+                    <% end %>
+                    of <%= prj.target %>
+                  </h4>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
 </div>

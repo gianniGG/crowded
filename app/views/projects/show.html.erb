@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
 
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= stylesheet_link_tag "foundation.css" %> 
     <%= stylesheet_link_tag "project.css" %> 
     <%= stylesheet_link_tag "style1.css" %> 
@@ -15,8 +16,15 @@
     <%= javascript_include_tag "modernizr.js" %>
     <%= javascript_include_tag "modernizr.custom.js" %>
 
+
+    <%= stylesheet_link_tag "main1.css" %>
+    <%= stylesheet_link_tag "style.css" %>
+   
+   
+   
   </head>
   <body>
+    <%= render "shared/header" %>
 
 <!-- TOP SECTION: PROJECT OVERVIEW -->
     <div id="block1-bg">
@@ -25,18 +33,18 @@
           
           <div class="large-12 columns">
             <ul class="project-title">
-              <li class="li-title"><h1 style="color:white;"><%= @project.name %></h1></li>
+              <li class="li-title"><h1><%= @project.name %></h1></li>
               <li class="li-subtitle"><h4>An Environment project from St Agnes, Cornwall by surfers-against-sewage</h4></li>
               <hr/>
             </ul>
 
             <ul id="double">
-              <li class="above"><h2 style="color:white;">
-                <span class="amount_raised" data-id="<%= @project.id %>">
-                  <%= @project.donations_total/100.0 %>
+              <li class="above"><h2>
+                £<span class="amount_raised" data-id="<%= @project.id %>">
+                  <%= @project.donations_total/100 %>
                 </span></h2></li>
-              <li class="above"><h2 style="color:white;">16</h2></li>
-              <li class="above"><h2 style="color:white;">£ 20,000</h2></li>
+              <li class="above"><h2>16</h2></li>
+              <li class="above"><h2>£ 2K</h2></li>
               <li class="below"><h4>From £1 donations</h4></li>
               <li class="below"><h4>Days to go</h4></li>
               <li class="below"><h4>Target</h4></li>
@@ -46,22 +54,23 @@
         </div>  <!-- end row -->
 
         <div class='row' style="padding: 10px 5px 0px 10px;">
-          <div class="large-8 columns wistia">
+          <div class="large-8 medium-12 columns wistia">
             <div id="wistia_72ptjwixw3" data-video-width="640" data-video-height="360">
               this is displayed if javascript is disabled
             </div>
           </div>
 
-          <div class="large-4 columns wistia">
+          <div class="large-4 medium-12 columns wistia">
 
-              <button id="trigger-overlay" class="make-it-happen-btn">
-               <h2>MAKE IT<br/>HAPPEN</h2>
-             </button>
-
+            <button id="trigger-overlay" class="make-it-happen-btn">
+              <h2>MAKE IT<br/>HAPPEN</h2>
+            </button>
+<!-- 
             <% if company_signed_in? %>
               <h3> You are signed in as a Company</h3>
               <h3> Sign in as a User to make a donation</h3>
             <% end %>
+             -->
               <div class="overlay overlay-hugeinc">
                 <button type="button" class="overlay-close">Close</button>
                 
@@ -79,19 +88,19 @@
               </div>
 
               <button id="project-btn" class="btn-vid project-info">
-                <h3 style="color:white;">PROJECT INFO</h3>
+                <h3>PROJECT INFO</h3>
               </button>
 
               <button id="company-btn" class="btn-vid company-info">
-                <h3 style="color:white;">COMPANY INFO</h3>
+                <h3>COMPANY INFO</h3>
               </button>
 
           </div>
         </div> <!-- end row -->
 
-        <div class='row portal' style="padding-top:10px;">
+        <div class="row portal">
           <div id="portal" class="large-12 columns portal">
-            <h2 style="text-align:center;">PROJECT INFO</h2>
+            <h2>PROJECT INFO</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -99,7 +108,7 @@
           </div> <!-- end large-12 columns portal -->
 
           <div id="portal2" class="large-12 columns portal">
-            <h2 style="text-align:center;">COMPANY INFO</h2>
+            <h2>COMPANY INFO</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
           </div> <!-- end large-12 columns portal -->
@@ -112,7 +121,7 @@
     <div id="block2-bg">
       <div class="row block2">
         <div class="large-12 columns block2">
-          <div class="holder-div" style="text-align:center;">
+          <div class="holder-div">
             <h2>MEET OTHER FUNDERS OF THIS PROJECT</h2>
 
               
@@ -126,134 +135,169 @@
           
     <div id="block3-bg">
       <div class="large-12 columns discover-title">
-        <h2>DISCOVER OTHER PROJECTS</h2>
+        <h2>FEATURED PROJECTS</h2>
       </div>
       <div class="row projects-top" data-equalizer>
 
         <div class="large-4 columns projects">
             <ul class="pricing-table" data-equalizer-watch>
-              <li><img src="img/wistia-holder_698x393.png"/></li>
+              <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
               <br/>
-              <li><p style="text-align: center;">PROJECT TTILE 1</p></li>
-              <li id="prj-text"><h5>PROJECT DESCIRPTION blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah</h5></li>
+              <li><h4>PROJECT TITLE HERE</h4></li>
+              <li id="prj-text"><h5>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah blah blah blah blah blah blah blah blah</h5></li>
               <li>
                 <div id="navcontainer">
                   <ul>
-                    <li class="funded">£ 12,645</li>
-                    <li class="backers">145</li>
-                    <li class="days2go">23</li>
+                    <li class="funded">£ 1,645</li>
+                    <li class="backers">25</li>
+                    <li class="days2go">£4,000</li>
+                  </ul>
+
+                  <ul class='definitions'>
+                    <li class="funded">£1 donations</li>
+                    <li class="backers">days left</li>
+                    <li class="days2go">Target</li>
                   </ul>
                 </div>
               </li>
-              <li class="cta-button"><a class="button" href="#">MAKE IT HAPPEN</a></li>
+              <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
             </ul>    
         </div>
         
         <div class="large-4 columns projects">
-            <ul class="pricing-table" data-equalizer-watch>
-              <li><img src="img/wistia-holder_698x393.png"/></li>
-              <br/>
-              <li><p style="text-align: center;">PROJECT TTILE 1</p></li>
-              <li id="prj-text"><h5>PROJECT DESCIRPTION blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-               blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah</h5></li>
-              <li>
-                <div id="navcontainer">
-                  <ul>
-                    <li class="funded">£ 12,645</li>
-                    <li class="backers">145</li>
-                    <li class="days2go">23</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="cta-button"><a class="button" href="#">MAKE IT HAPPEN</a></li>
-            </ul>    
-        </div>
+              <ul class="pricing-table" data-equalizer-watch>
+                <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
+                <br/>
+                <li><h4>PROJECT TITLE HERE</h4></li>
+                <li id="prj-text"><h5>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                  blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah blah blah blah blah blah blah blah blah</h5></li>
+                <li>
+                  <div id="navcontainer">
+                    <ul>
+                      <li class="funded">£ 1,645</li>
+                      <li class="backers">25</li>
+                      <li class="days2go">£4,000</li>
+                    </ul>
 
+                    <ul class='definitions'>
+                      <li class="funded">£1 donations</li>
+                      <li class="backers">days left</li>
+                      <li class="days2go">Target</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
+              </ul>    
+          </div>  
+              
         <div class="large-4 columns projects">
-            <ul class="pricing-table" data-equalizer-watch>
-              <li><img src="img/wistia-holder_698x393.png"/></li>
-              <br/>
-              <li><p style="text-align: center;">PROJECT TTILE 1</p></li>
-              <li id="prj-text"><h5>PROJECT DESCIRPTION blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-               blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah</h5></li>
-              <li>
-                <div id="navcontainer">
-                  <ul>
-                    <li class="funded">£ 12,645</li>
-                    <li class="backers">145</li>
-                    <li class="days2go">23</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="cta-button"><a class="button" href="#">MAKE IT HAPPEN</a></li>
-            </ul>    
-        </div>
+              <ul class="pricing-table" data-equalizer-watch>
+                <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
+                <br/>
+                <li><h4>PROJECT TITLE HERE</h4></li>
+                <li id="prj-text"><h5>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                  blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah blah blah blah blah blah blah blah blah</h5></li>
+                <li>
+                  <div id="navcontainer">
+                    <ul>
+                      <li class="funded">£ 1,645</li>
+                      <li class="backers">25</li>
+                      <li class="days2go">£4,000</li>
+                    </ul>
 
-
+                    <ul class='definitions'>
+                      <li class="funded">£1 donations</li>
+                      <li class="backers">days left</li>
+                      <li class="days2go">Target</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
+              </ul>    
+          </div>
         </div>
 
       <div class="row projects-bottom" data-equalizer>
+              
+        <div class="large-4 columns projects">
+              <ul class="pricing-table" data-equalizer-watch>
+                <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
+                <br/>
+                <li><h4>PROJECT TITLE HERE</h4></li>
+                <li id="prj-text"><h5>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                  blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah blah blah blah blah blah blah blah blah</h5></li>
+                <li>
+                  <div id="navcontainer">
+                    <ul>
+                      <li class="funded">£ 1,645</li>
+                      <li class="backers">25</li>
+                      <li class="days2go">£4,000</li>
+                    </ul>
 
-        <div class="large-4 columns projects">
-            <ul class="pricing-table" data-equalizer-watch>
-              <li><img src="img/wistia-holder_698x393.png"/></li>
-              <br/>
-              <li><p style="text-align: center;">PROJECT TTILE 1</p></li>
-              <li id="prj-text"><h5>PROJECT DESCIRPTION blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-               blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah</h5></li>
-              <li>
-                <div id="navcontainer">
-                  <ul>
-                    <li class="funded">£ 12,645</li>
-                    <li class="backers">145</li>
-                    <li class="days2go">23</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="cta-button"><a class="button" href="#">MAKE IT HAPPEN</a></li>
-            </ul>    
-        </div>
-        
-        <div class="large-4 columns projects">
-            <ul class="pricing-table" data-equalizer-watch>
-              <li><img src="img/wistia-holder_698x393.png"/></li>
-              <br/>
-              <li><p style="text-align: center;">PROJECT TTILE 1</p></li>
-              <li id="prj-text"><h5>PROJECT DESCIRPTION blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-               blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah</h5></li>
-              <li>
-                <div id="navcontainer">
-                  <ul>
-                    <li class="funded">£ 12,645</li>
-                    <li class="backers">145</li>
-                    <li class="days2go">23</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="cta-button"><a class="button" href="#">MAKE IT HAPPEN</a></li>
-            </ul>    
-        </div>
+                    <ul class='definitions'>
+                      <li class="funded">£1 donations</li>
+                      <li class="backers">days left</li>
+                      <li class="days2go">Target</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
+              </ul>    
+          </div>
+              
+          <div class="large-4 columns projects">
+                <ul class="pricing-table" data-equalizer-watch>
+                  <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
+                  <br/>
+                  <li><h4>PROJECT TITLE HERE</h4></li>
+                  <li id="prj-text"><h5>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                    blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah blah blah blah blah blah blah blah blah</h5></li>
+                  <li>
+                    <div id="navcontainer">
+                      <ul>
+                        <li class="funded">£ 1,645</li>
+                        <li class="backers">25</li>
+                        <li class="days2go">£4,000</li>
+                      </ul>
 
-        <div class="large-4 columns projects">
-            <ul class="pricing-table" data-equalizer-watch>
-              <li><img src="img/wistia-holder_698x393.png"/></li>
-              <br/>
-              <li><p style="text-align: center;">PROJECT TTILE 1</p></li>
-              <li id="prj-text"><h5>PROJECT DESCIRPTION blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-               blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah</h5></li>
-              <li>
-                <div id="navcontainer">
-                  <ul>
-                    <li class="funded">£ 12,645</li>
-                    <li class="backers">145</li>
-                    <li class="days2go">23</li>
-                  </ul>
-                </div>
-              </li>
-              <li class="cta-button"><a class="button" href="#">MAKE IT HAPPEN</a></li>
-            </ul>    
-        </div>
+                      <ul class='definitions'>
+                        <li class="funded">£1 donations</li>
+                        <li class="backers">days left</li>
+                        <li class="days2go">Target</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
+                </ul>    
+            </div>
+
+                
+          <div class="large-4 columns projects">
+                <ul class="pricing-table" data-equalizer-watch>
+                  <li><%= image_tag("wistia-holder_698x393.png", :alt => "project thumbnail") %></li>
+                  <br/>
+                  <li><h4>PROJECT TITLE HERE</h4></li>
+                  <li id="prj-text"><h5>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                    blah blah blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blahblah blah blah blah blah blah blah blah blah blah blah blah blah blah</h5></li>
+                  <li>
+                    <div id="navcontainer">
+                      <ul>
+                        <li class="funded">£ 1,645</li>
+                        <li class="backers">25</li>
+                        <li class="days2go">£4,000</li>
+                      </ul>
+
+                      <ul class='definitions'>
+                        <li class="funded">£1 donations</li>
+                        <li class="backers">days left</li>
+                        <li class="days2go">Target</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="cta-button"><a class="button" href="#">GO TO PROJECT</a></li>
+                </ul>    
+            </div>
 
       </div>
     </div> <!-- end of block3-bg -->
@@ -262,11 +306,16 @@
 <!-- SECTION 4: SOCIAL BAKING -->
 
     <div id="block4-bg">
-      <div class="row block3">
-        <div class="large-12 columns block3">
-          <div class="holder-div" style="text-align:center;">
-            <h3>SOCIAL ICONS ???</h3>
-          </div>
+      <div class="row block4">
+        <div class="small-6 large-centered columns">
+            <a class="social" href="http://twitter.com/crowdded" style="text-decoration:none" target="_blank">
+            <i class="fa fa-twitter fa-5x"></i></a>
+            <a class="google" href="http://google.com/crowdfunding" style="text-decoration:none" target="_blank">
+            <i class="fa fa-google-plus fa-5x"></i></a>
+            <a class="face" href="http://facebook.com/anath.abensour" style="text-decoration:none" target="_blank">
+            <i class="fa fa-facebook fa-5x"></i></a>
+            <a class="linkedin" href="http://linkedin.com/" style="text-decoration:none" target="_blank">
+            <i class="fa fa-linkedin fa-5x"></i></a>
         </div>
       </div>
     </div>

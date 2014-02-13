@@ -23,9 +23,6 @@ Rails.application.routes.draw do
   end
 
   resources :projects do
-    member do
-      get 'home'
-    end
     collection do
       post 'search'
     end

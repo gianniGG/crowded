@@ -15,3 +15,70 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+<%= stylesheet_link_tag "foundation.css" %> 
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<form style="background-color:#91ED7C;" >
+  <div class="row">
+    <div class="small-8">
+
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Email</label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" id="right-label" placeholder="Inline Text Input">
+        </div>   
+
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Password</label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" id="right-label" placeholder="Inline Text Input">
+        </div>
+      </div> <!-- end of row -->
+
+      <div class="row">
+        <div class="small-3 columns">&nbsp;</div>
+        <div class="small-4 columns">
+          <input type="checkbox" name="pokemon" value="Red" class="left inline" id="checkbox"><label for="checkbox">Remember me</label>
+        </div>
+        <div class="small-5 columns">
+          <input type="checkbox" name="pokemon" value="Red" class="left inline" id="checkbox"><label for="checkbox">Forgot your password?</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-3 columns">&nbsp;</div>
+        <div class="small-3 columns">
+          <a href="#" class="button" class="left inline">Sign in</a>
+        </div>
+        <div class="small-2 columns"><i class="fa fa-twitter fa-2x"></i></div>
+        <div class="small-2 columns"><i class="fa fa-facebook fa-2x"></i></div>
+        <div class="small-2 columns"><i class="fa fa-linkedin fa-2x"></div>
+      </div>
+
+<!--       <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Sign in with</label>
+        </div>
+        <div class="small-2 columns">
+          <i class="fa fa-twitter fa-3x"></i>
+        </div>
+        <div class="small-2 columns">
+          <i class="fa fa-facebook fa-3x"></i>
+        </div>
+        <div class="small-2 columns">
+          <i class="fa fa-linkedin fa-3x"></i>
+        </div>        
+        <div class="small-3 columns"></div>
+      </div> -->
+
+    </div>
+  </div> <!-- end of row (top) -->
+</form>

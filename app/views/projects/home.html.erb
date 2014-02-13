@@ -26,35 +26,8 @@
 
   </head>
   <body>
-  <div class="fixed">
-      <nav class="top-bar" data-topbar>
-       <ul class="title-area">
-          <li class="name">
-            <a href="#"> <%= image_tag "crowdlogo.png" %> </a>
-          </li>
-        </ul>
-        <section class="top-bar-section">
-          <ul class="right">
-            <li>
-              <a href="#" class="alert button">Discover Projects</a>
-            </li>
-            <li class="active"><a href="#"><i class="fa fa-sign-in fa-fw"></i>  log in</a>
-            </li>
 
-            <li class="active"><a href="#"><i class="fa fa-pencil-square-o fa-fw"></i>   sign up</a></li>
-
-          </ul>
-        </section>
-      </nav>
-    </div>
-
-    <div class="mobile-nav">
-      <a href="#">Login</a>
-      <a href="#">Sign up</a>
-    </div>
-
-    </div>
-
+  <%= render "shared/header" %>
 
     
     <div id="block1">
@@ -182,42 +155,19 @@
     <div id="block3">
       <div class="row block3 videorow">
         <div class="small-6 large-centered columns">
-          <h1> <%= image_tag "crowdleafgrey.png" %> PROJECT EXAMPLES </h1>
-        <ul class="example-orbit" data-orbit>
-            <li>
+          <h1> <%= image_tag "crowdleafgrey.png" %> Feature Project </h1>
+        
               <div class="slidvideo">
                <div id="wistia_72ptjwixw3" data-video-width="640" data-video-height="360"> </div>
              </div>
                 
-            </li>
-            <li>
-             <!--  <div id="wistia_72ptjwixw3" data-video-width="640" data-video-height="360"> </div> -->
-                
-            </li>
-            <li>
-              <!-- <div id="wistia_72ptjwixw3" data-video-width="640" data-video-height="360"> </div> -->
-               
-            </li>
-          </ul> 
+  
          </div>
          
       </div>
-    </div>
-    <div id="block4">
-      <div class="row block4">
-        <div class="small-6 large-centered columns">
-            <a class="social" href="http://twitter.com/crowdded" style="text-decoration:none" target="_blank">
-            <i class="fa fa-twitter fa-5x"></i></a>
-            <a class="google" href="http://google.com/crowdfunding" style="text-decoration:none" target="_blank">
-            <i class="fa fa-google-plus fa-5x"></i></a>
-            <a class="face" href="http://facebook.com/anath.abensour" style="text-decoration:none" target="_blank">
-            <i class="fa fa-facebook fa-5x"></i></a>
-            <a class="linkedin" href="http://linkedin.com/" style="text-decoration:none" target="_blank">
-            <i class="fa fa-linkedin fa-5x"></i></a>
-        </div>
-      </div>
-    </div>
 
+
+    </div>
     <div id="block5">
       <div class="row block5">
         <div class="small-6 large-centered columns">
@@ -273,10 +223,26 @@
         </div>
       </div>
     </div>
+    <div id="block4">
+      <div class="row block4">
+        <div class="small-6 large-centered columns">
+            <a class="social" href="http://twitter.com/crowdded" style="text-decoration:none" target="_blank">
+            <i class="fa fa-twitter fa-5x"></i></a>
+            <a class="google" href="http://google.com/crowdfunding" style="text-decoration:none" target="_blank">
+            <i class="fa fa-google-plus fa-5x"></i></a>
+            <a class="face" href="http://facebook.com/anath.abensour" style="text-decoration:none" target="_blank">
+            <i class="fa fa-facebook fa-5x"></i></a>
+            <a class="linkedin" href="http://linkedin.com/" style="text-decoration:none" target="_blank">
+            <i class="fa fa-linkedin fa-5x"></i></a>
+        </div>
+      </div>
+    </div>
+
+    
     
    
 
-    <footer>@Jame/Tom/Gianni/Giacomo/Anath</footer>
+    <footer>@James Brooke/Tom Shacham/Gianni Guitteaud/Giacomo Patella/Anath Abensour</footer>
     
     <%= javascript_include_tag "jquery.js" %>
     <%= javascript_include_tag "foundation.min.js" %>
@@ -317,14 +283,10 @@
         playerColor: "ff0000",
         fullscreenButton: false,
         container: "wistia_72ptjwixw3",
-        videoFoam: true,
+        videoFoam: true
 
 
-        plugin: {
-        "socialbar-v1": {
-        buttons: "embed-twitter-facebook"
-        }
-        }
+        
         });
       
         });

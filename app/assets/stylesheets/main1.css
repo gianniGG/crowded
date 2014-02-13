@@ -1,6 +1,6 @@
 nav.top-bar {
-	height: 71px;
-	background-color: white;
+  height: 71px;
+  background-color: white;
 }
 
 button.alert, .button.alert {
@@ -14,9 +14,9 @@ background-color: #43D769;
 }
 
 .large-12.columns {
-	width:100%;
-	height:600px;
-	border: 1px solid;
+  width:100%;
+  height:600px;
+  border: 1px solid;
 }
 
 
@@ -52,6 +52,7 @@ padding: 20px;
 .name a img {
   width: 200px;
 }
+
 .top-bar-section ul {
   padding-right: 80px;
   padding-top: 20px;
@@ -78,7 +79,7 @@ background: white; }
 
 
 #block1 {
-	background-color: rgb(180, 186, 183);
+  background-color: rgb(180, 186, 183);
   position: relative;
   opacity: 0.8;
   width:100;
@@ -309,7 +310,7 @@ color:rgba(25, 23, 23, 0.65);
 }
 
 .fa-5x {
-font-size: 20em;
+font-size: 6em;
 padding-left: 90px;
 padding-top: 70px;
 padding-right: 15px;

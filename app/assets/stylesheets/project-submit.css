@@ -1,5 +1,5 @@
 body {
-  background-color: #42c883;
+  background-color: #91ED7C;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, div, label, form {
@@ -32,4 +32,32 @@ label {
   margin-right: auto;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.row.projectform {
+  width: 60%;
+}
+
+@media(max-width: 1024px) {
+  .row.projectform {
+    width: 80%;
+  }
+}
+
+@media(max-width: 700px) {
+  .row.projectform {
+    width: 100%;
+  }
+}
+
+@media(max-width: 700px) {
+  label {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 495px) {
+  label {
+    font-size: 12px;
+  }
 }

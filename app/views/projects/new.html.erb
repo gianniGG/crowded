@@ -15,16 +15,21 @@
 </head>
   <body>
     <div class="page-container">
-      <div id="wistia-upload-widget" style="width: 200px; height: 30px;"></div>
         <%= form_for @project do |f| %>
-      <div class="large-12 columns">
-      <div id="submit-title">
-        <h2>SUBMIT YOUR PROJECT</h2>
+    <div class="row projectform">
+        <div class="large-12 columns">
+        <div id="submit-title">
+          <h2>SUBMIT YOUR PROJECT</h2>
+          <div class="large-12 columns">
+            <div id="wistia-upload-widget" style="width:200px; height:30px; margin:40px auto;">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <form>
-      <div class="row">
+      <div class="row projectform">
         <div class="large-12 columns">
           <label>Name
             <%= f.text_field :name, placeholder: "Project Name" %>
@@ -36,7 +41,7 @@
           </label>
         </div>
       </div>
-      <div class="row">
+      <div class="row projectform">
         <div class="large-6 columns">
           <label>Target
             <%= f.text_field :target, placeholder: "Amount you wish to raise in £s" %>
@@ -48,23 +53,31 @@
           </label>
         </div>
       </div>
-      <div class="row">
+      <div class="row projectform">
         <div class="large-12 columns">
           <label>Give a bit more information about your project
             <%= f.text_field :project_info, placeholder: "Why does this project matter?" %>
           </label>
         </div>
       </div>
-      <div class="row">
+      <div class="row projectform">
         <div class="large-12 columns">
           <label>Give a bit more information about your company
             <%= f.text_field :company_info, placeholder: "Why are you guys the people to do it?" %>
           </label>
         </div>
       </div>
-     <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
-     <%= f.hidden_field :company_id, :value => current_company.id %> 
-     <%= f.submit :launch %>
+
+        <div class="row projectform">
+          <div class="large-12 columns">
+            <div id="launch-btn" style="text-align:center;">
+         <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
+         <%= f.hidden_field :company_id, :value => current_company.id %> 
+         <%= f.hidden_field :thumbnail, :value => "", :id => "project_thumbnail" %>
+         <%= f.button :launch %>
+            </div>
+         </div>
+       </div>
     </form>
     <% end %>
   </div> <!-- end of page container -->
@@ -81,6 +94,7 @@
             callbacks: {
               'uploadSuccess': function(jsonFile){
                 $('#project_hashed_id').val(jsonFile['hashed_id']);
+                $('#project_thumbnail').val(jsonFile['thumbnail']['url']);
               }
             }
      });
