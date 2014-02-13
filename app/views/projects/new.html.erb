@@ -63,6 +63,7 @@
         </div>
       </div>
      <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
+     <%= f.hidden_field :thumbnail, :value => "", :id => "project_thumbnail" %>
      <%= f.hidden_field :company_id, :value => current_company.id %> 
      <%= f.submit :launch %>
     </form>
@@ -80,7 +81,9 @@
           publicProjectId: 'tluer5qj30',
             callbacks: {
               'uploadSuccess': function(jsonFile){
+                console.log(jsonFile)
                 $('#project_hashed_id').val(jsonFile['hashed_id']);
+                $('#project_thumbnail').val(jsonFile['thumbnail']['url']);
               }
             }
      });

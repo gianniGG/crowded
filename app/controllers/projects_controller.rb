@@ -55,6 +55,6 @@ class ProjectsController < ApplicationController
         funds_raised: params[:project][:funds_raised],
         duration: params[:project][:duration],
         project_info: params[:project][:project_info],
-        company_id: current_company.id}
+        company_id: current_company.id, thumbnail: params[:project][:thumbnail]}
     end
 end
