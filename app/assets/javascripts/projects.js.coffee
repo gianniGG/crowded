@@ -17,8 +17,9 @@ $ ->
     $('.proj-container').html('<div></div>')
     $.post('/projects/search', {search: $(this).val() }, (projects) ->
       for proj in projects.projects
-        $('.proj-container').append("<h3>" + proj.name +
+        $('.proj-container').append("<div class='project-box'>" +
+          "<h3>" + "<a href='/projects/" + proj.id + "'>" + proj.name + "</a>" +
         "<h4> Headline: " + proj.headline + "</h4>" +
-        "<h4> Raised: £" + proj.funds_raised/100 + "</h4>"
-        "</h3>")
+        "<h4> Raised: £" + proj.funds/100 + "</h4>"
+        "</h3></div>")
     )
