@@ -29,10 +29,12 @@
                   <h4>
                     Mission: <%= prj.headline %>
                   </h4>
+                  <% if prj.funds_raised %>
                   <h4>
                     Raised: £
                     <%= prj.funds_raised /  100 %> of <%= prj.target %>
                   </h4>
+                  <%end%>
                 </div>
               <% end %>
             <% end %>

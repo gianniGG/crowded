@@ -20,6 +20,6 @@ $ ->
         $('.proj-container').append("<div class='project-box'>" +
           "<h3>" + "<a href='/projects/" + proj.id + "'>" + proj.name + "</a>" +
         "<h4> Headline: " + proj.headline + "</h4>" +
-        "<h4> Raised: £" + proj.funds/100 + "</h4>"
+        "<h4> Raised: £" + proj.funds_raised/100 + "</h4>"
         "</h3></div>")
     )
