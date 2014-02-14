@@ -80,7 +80,7 @@ background: white; }
   position: relative;
   opacity: 0.8;
   width:100;
-  
+
 }
 
 
@@ -163,13 +163,13 @@ max-width: 62.5em;
   font-size: 25px;
   color: rgba(222, 23, 23, 0.7);
 
-  
+
 }
 .investors h2 {
   font-size:15px;
   font-family: "Raleway";
   font-weight: 400;
-  
+
 }
 
 .investors p {
@@ -181,11 +181,11 @@ max-width: 62.5em;
   text-align: center;
   font-size: 25px;
   color: rgba(222, 23, 23, 0.7);
-  
+
 }
 .business h2 {
   font-size:15px;
-  
+
 }
 
 .business p {
@@ -265,7 +265,7 @@ height:300px;
 
 #block5 {
   height: 500px;
-  
+
 }
 
 #block5 h1 {
