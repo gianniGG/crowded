@@ -1,6 +1,4 @@
-<head>
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-</head>
+
 <body>
 <%= render "shared/header" %>
 
@@ -12,9 +10,6 @@
 
             <%= f.text_field :search, placeholder: "Search.."%>
 
-
-
-
           <% end %>
 
 
@@ -24,7 +19,7 @@
               <% @projects.each do |prj| %>
                 <div class='project-box'>
                 <%= link_to project_path(prj) do %>
-                  <img src="<%= prj.thumbnail %>?image_resize=1000&image_play_button=true&image_play_button_color=FF463A"/>                  
+                  <img src="<%= prj.thumbnail %>?image_resize=1000&image_play_button=true&image_play_button_color=FF463A"/>
                 <% end %>
                   <h3>
                     <%= link_to prj.name, project_path(prj) %>
@@ -32,10 +27,10 @@
                   <h4>
                     Mission: <%= prj.headline %>
                   </h4>
-                  <% if prj.funds_raised %>
+                  <% if prj.funds %>
                   <h4>
                     Raised: £
-                    <%= prj.funds_raised /  100 %> of <%= prj.target %>
+                    <%= prj.funds /  100 %> of <%= prj.target %>
                   </h4>
                   <%end%>
                 </div>
