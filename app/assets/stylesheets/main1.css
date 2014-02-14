@@ -93,8 +93,7 @@ font-weight: 900;
 font-size: 18px;
 font-weight: normal;
 }
-.top-bar-section li:not(.has-form) a:not(.button):hover {
-background: white; }
+
 
 
 #block1 {
@@ -346,7 +345,10 @@ color: white;
 .block5 h1 img {
 max-width: 8%;
 padding-bottom: 29px;
+}
 
+#block5 {
+margin-bottom: 40px;
 }
 
 .block3 h1 img {
