@@ -275,7 +275,7 @@ border-bottom: 1px solid;
 }
 
 #block2-bg {
-  height: 500px; 
+  height: 500px;
 }
 
 .block2 h1 img {
@@ -519,4 +519,8 @@ button hr {
   width: 50%;
   padding: 1%;
   margin: 1%;
+}
+
+.portal {
+    padding-left: 50px;
 }
