@@ -3,16 +3,22 @@ nav.top-bar {
   background-color: white;
 }
 
-button.alert, .button.alert.discover {
+button.alert, .button.alert {
 background-color: rgba(131, 176, 103, 0.89);
 border-color: #9e0c0f;
 color: white;
+
 
 /*height: 37px;*/
 }
 .button.alert:hover, .button.alert:focus {
 background-color: #43D769;
 }
+.top-bar-section ul li {
+float: left;
+padding-right: 20px;
+}
+
 
 
 
@@ -22,8 +28,15 @@ background-color: #43D769;
   width:100%;
 }
 
-.top-bar-section ul li > a.button.alert {
+.top-bar-section ul li > a.discover.button.alert {
 background-color: rgba(131, 176, 103, 0.89);
+border-color: #9e0c0f;
+color: white;
+font-size: 15px;
+}
+
+.top-bar-section ul li > a.submit.button.alert {
+background-color: rgba(180, 148, 191, 1);
 border-color: #9e0c0f;
 color: white;
 font-size: 15px;
@@ -36,6 +49,11 @@ background: #0CA20F;
 background-color: #43D769;
 }
 
+.top-bar-section li:not(.has-form) a:not(.button) {
+padding: 0 4px;
+line-height: 50px;
+}
+
 
 .small-6 {
 position: relative;
@@ -46,7 +64,7 @@ padding: 20px;
 
 .name a {
   padding-left: 260px;
-  padding-top: 8px;
+  padding-top: 6px;
   display: inline-block;
 }
 

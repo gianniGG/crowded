@@ -8,15 +8,25 @@
     <section class="top-bar-section">
       <ul class="right">
         <li>
-          <a href="/projects" class="alert button">Discover Projects</a>
+          <a href="/projects" class="discover alert button "> <i class="fa fa-caret-square-o-right"></i> Discover Projects</a>
+        </li>
+        <li>
+          <a href="/projects" class="alert button submit"> <i class="fa fa-bookmark"></i> Submit Projects</a>
         </li>
         <% if current_user %>
           <li class="active">
             <%= link_to destroy_user_session_path, method: :delete do %>
               <i class="fa fa-sign-in fa-fw"></i>
-              sign out
+              Sign out
             <% end %>
           </li>
+          <li class="active">
+            <%= link_to user_path(current_user) do %>
+              <i class="fa fa-user fa-fw"></i>
+              Profile
+            <% end %>
+          </li>
+
         <% else %>
           <li class="active">
           	<a href="/users/sign_in">
