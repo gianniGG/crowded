@@ -11,6 +11,10 @@ body, h1, h2, h3, h4, h5, h6, p, div, label, form {
   /*border: 5px solid;*/
 }
 
+img {
+  width: 10%;
+}
+
 #submit-title {
   text-align: center;
   margin-bottom: 30px;
@@ -19,10 +23,6 @@ body, h1, h2, h3, h4, h5, h6, p, div, label, form {
 #submit-title h2 {
   font-weight: 700;
   color: #353535;
-}
-
-img {
-  width: 10%;
 }
 
 .large-12.columns.leaf {
