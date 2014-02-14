@@ -1,0 +1,20 @@
+body {
+  background: rgba(131, 176, 103, 0.82);
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif ;
+}
+
+.project-box {
+  width: auto;
+  border-radius: 3px;
+  background-color: rgba(62, 120, 98, 0.63);
+  border: none;
+  padding: 30px;
+}
+
+.project-box a {
+  color: white;
+}
+
+.large-12.search { 
+  margin-top: 90px;
+}

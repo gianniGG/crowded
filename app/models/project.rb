@@ -4,7 +4,7 @@ class Project < ActiveRecord::Base
   has_many :donations
   has_many :users, through: :donations
 
-  before_create { self.name = name.downcase }
+  before_create { self.name = name.capitalize }
 
   validates :name, presence: true
 

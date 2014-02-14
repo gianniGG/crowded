@@ -328,7 +328,10 @@ color: white;
 .block5 h1 img {
 max-width: 8%;
 padding-bottom: 29px;
+}
 
+#block5 {
+margin-bottom: 40px;
 }
 
 .block3 h1 img {
