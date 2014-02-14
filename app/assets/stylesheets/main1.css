@@ -3,15 +3,20 @@ nav.top-bar {
   background-color: white;
 }
 
-button.alert, .button.alert {
+button.alert, .button.alert.discover {
 background-color: rgba(131, 176, 103, 0.89);
 border-color: #9e0c0f;
 color: white;
+
 /*height: 37px;*/
 }
 .button.alert:hover, .button.alert:focus {
 background-color: #43D769;
 }
+
+
+
+
 
 .large-12.columns {
   width:100%;
@@ -22,7 +27,6 @@ background-color: rgba(131, 176, 103, 0.89);
 border-color: #9e0c0f;
 color: white;
 font-size: 15px;
-
 }
 
 .top-bar-section ul li > a.button.alert:hover {
@@ -51,7 +55,7 @@ padding: 20px;
 }
 
 .top-bar-section ul {
-  padding-right: 80px;
+  padding-right: 7px;
   padding-top: 20px;
 
 }
@@ -159,6 +163,7 @@ margin-bottom: 0;
 max-width: 62.5em;
 }
 .investors h1 {
+  padding: 10px;
   text-align: center;
   font-size: 25px;
   color: rgba(222, 23, 23, 0.7);
@@ -178,6 +183,7 @@ max-width: 62.5em;
 }
 
 .business h1 {
+  padding: 10px;
   text-align: center;
   font-size: 25px;
   color: rgba(222, 23, 23, 0.7);
@@ -309,9 +315,9 @@ color:rgba(25, 23, 23, 0.65);
 .fa-5x {
 font-size: 6em;
 padding-left: 90px;
-padding-top: 70px;
-padding-right: 15px;
-color:white;
+padding-top: 85px;
+padding-right: 47px;
+color: white;
 }
 
 .fa-5x:hover {
@@ -332,7 +338,7 @@ padding-bottom: 29px;
 .inside p {
 display:inline-block;
 font-size: 10px;
-margin-top: 160px;
+margin-top: 146px;
 line-height: 1.2;
 margin-right: 40px;
 padding-right: 30px;
