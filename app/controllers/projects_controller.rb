@@ -2,13 +2,13 @@ class ProjectsController < ApplicationController
   respond_to :html, :json
 
   def home
-    render layout: false
+    # render layout: false
     @projects = Project.last(3)
   end
 
   def new
     @project = Project.new
-    render :layout => false
+    # render :layout => false
   end
 
   def create
@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
 
   private
     def project_params
-      {company: current_company, 
+      {company: current_company,
         name: params[:project][:name],
         headline: params[:project][:headline],
         hashed_id: params[:project][:hashed_id],
