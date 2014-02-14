@@ -412,6 +412,24 @@ color:white;
   opacity:0.4;
 }
 
+#ico-social {
+  display: inline;
+}
+
+#ico-social li {
+/*  line-height: 1.3em;*/
+  float: left;
+  display: inline;
+  width: 25%;
+}
+
+#ico-social ul {
+/*  line-height: 1.3em;*/
+  text-align: center;
+  margin-left: -60px;
+  margin-bottom: -30px;
+}
+
 /*OVERLAY*/
 nav {
   font-family: Raleway, Helevetica Neue, sans-serif;
