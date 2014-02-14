@@ -1,6 +1,6 @@
 
-<%= stylesheet_link_tag "foundation.css" %> 
-<%= stylesheet_link_tag "sign-in.css" %> 
+<%= stylesheet_link_tag "foundation.css" %>
+<%= stylesheet_link_tag "sign-in.css" %>
 
 
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -28,7 +28,7 @@
         <div class="small-9 columns">
           <%= f.email_field :email, :autofocus => true %>
         </div>
-      </div>  
+      </div>
 
       <div class="row">
         <div class="small-3 columns">
@@ -47,7 +47,7 @@
           <% if devise_mapping.rememberable? -%>
             <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
           <% end -%>
-        
+
         </div>
         <div class="small-5 columns">
           <input type="checkbox" name="pokemon" value="Red" class="left inline" id="checkbox"><label for="checkbox">Forgot your password?</label>
@@ -55,16 +55,24 @@
       </div>
 
       <div class="row">
-        
+
         <div class="small-3 columns">&nbsp;</div>
         <div class="small-3 columns">
           <!-- <a href="#" class="button" class="left inline">Sign in</a> -->
           <%= f.button "Sign in" %>
         </div>
 
-        <div class="small-2 columns"><i class="fa fa-twitter fa-2x"></i></div>
-        <div class="small-2 columns"><i class="fa fa-facebook fa-2x"></i></div>
-        <div class="small-2 columns"><i class="fa fa-linkedin fa-2x"></i></div>
+        <%= link_to omniauth_authorize_path(@user, :twitter) do %>
+              <div class="small-2 columns"><i class="fa fa-twitter fa-2x"></i></div>
+        <% end %>
+        <%= link_to omniauth_authorize_path(@user, :facebook) do %>
+          <div class="small-2 columns"><i class="fa fa-facebook fa-2x"></i></div>
+        <% end %>
+        <%= link_to omniauth_authorize_path(@user, :linkedin) do %>
+          <div class="small-2 columns"><i class="fa fa-linkedin fa-2x"></i></div>
+        <% end %>
+
+
       </div>
 
     </div>

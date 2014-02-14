@@ -10,19 +10,22 @@
         <li>
           <a href="/projects" class="alert button">Discover Projects</a>
         </li>
-        <li class="active">
-        	<a href="/users/sign_in">
-        		<i class="fa fa-sign-in fa-fw"></i> 
-        		log in
-        	</a>
-        </li>
+        <% if current_user %>
+          <li class="active">
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-in fa-fw"></i>
+              sign out
+            <% end %>
+          </li>
+        <% else %>
+          <li class="active">
+          	<a href="/users/sign_in">
+          		<i class="fa fa-sign-in fa-fw"></i>
+          		log in
+          	</a>
+          </li>
+        <% end %>
 
-        <li class="active">
-        	<a href="/users/sign_in">
-	        	<i class="fa fa-pencil-square-o fa-fw"></i>   
-        		sign up
-        	</a>
-      	</li>
       </ul>
     </section>
   </nav>
