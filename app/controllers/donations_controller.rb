@@ -7,7 +7,7 @@ class DonationsController < ApplicationController
 
     WebsocketRails[:project_donation].trigger 'new', {id: @project.id,
                                                   funds_raised: @project.donations_total,
-                                                  recent_donors: @project.recent_five }
+                                                  recent_donors: @project.recent_five.map(&:user) }
 
     WebsocketRails[:user_donation].trigger 'new', {id: @user.id,
                                                   points: @user.points}

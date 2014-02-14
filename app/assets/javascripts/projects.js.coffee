@@ -8,8 +8,11 @@ channel = dispatcher.subscribe('project_donation')
 channel.bind 'new',(project) ->
   $(".amount_raised[data-id=#{project.id}]").text(project.funds_raised / 100.0)
   recent_five = $(".recent_donors[data-id=#{project.id}]").html("<ul></ul>")
+  $('.overlay-close').click()
+  console.log project
   for donor in project.recent_donors
-    recent_five.prepend("<li>" + donor + "</li>")
+    recent_five.prepend("<li class='recent-donor-li'>" + donor.name +
+    " gave £1.00 at " + donor.updated_at + "</li>")
 
 #search projects
 $ ->

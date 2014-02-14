@@ -9,10 +9,12 @@
 
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
     <%= stylesheet_link_tag "foundation.css" %> 
     <%= stylesheet_link_tag "project.css" %> 
     <%= stylesheet_link_tag "style1.css" %> 
-    <%= stylesheet_link_tag "demo2.css" %>
+
+    <%= javascript_include_tag "application" %>
 
     <%= javascript_include_tag "modernizr.js" %>
     <%= javascript_include_tag "modernizr.custom.js" %>
@@ -53,18 +55,20 @@
           </div> <!-- large-12 columns -->
         </div>  <!-- end row -->
 
-        <div class="row">
+        <% if @project.donations %>
+          <div class="row">
 
-          <div class="recent_donors" data-id="<%= @project.id %>">
-            <ul>
-              <% @project.recent_five.reverse.each do |donation| %>
-                <li class="recent-donor-li">
-                  <%= donation.user.name %> gave £1.00 <%= "#{time_ago_in_words(donation.created_at)}"  %> ago!
-                </li>
-              <% end %>
-            </ul>
+            <div class="recent_donors" data-id="<%= @project.id %>">
+              <ul>
+                <% @project.recent_five.reverse.each do |donation| %>
+                  <li class="recent-donor-li">
+                    <%= donation.user.name %> gave £1.00 <%= "#{time_ago_in_words(donation.created_at)}"  %> ago!
+                  </li>
+                <% end %>
+              </ul>
+            </div>
           </div>
-        </div>
+        <% end %>
 
         <div class='row' style="padding: 10px 5px 0px 10px;">
           <div class="large-8 medium-12 columns wistia">
@@ -137,53 +141,7 @@
         <div class="small-6 large-centered columns">
           <h1><%= image_tag "crowdleaf.png"%> Meet the crowdd </h1>
 
-          <div class="scroller demo2">
-            
-            <div class="inside">
-              <a href="#"><%= image_tag "img1.jpg" %> </a>
 
-              <p> Jack Daniels </br>
-               35 years old </br>
-               Web developer </p>
-              <a href="#"><%= image_tag "img2.jpg" %> </a>
-              <p> Mick Jagger </br>
-               30 years old </br>
-               Rock band singer </p>
-              <a href="#"><%= image_tag "img3.jpg" %> </a>
-              <p> Beyonce </br>
-               32 years old </br>
-               Best dancer ever </p>
-              <a href="#"><%= image_tag "img4.jpg" %> </a>
-              <p> Melanie Fiord </br>
-               28 years old </br>
-               Graphic Designer </p>
-              <a href="#"><%= image_tag "img5.jpg" %> </a>
-              <p> Woddy Allen </br>
-               67 years old </br>
-               Jewish Film Maker </p>
-              <a href="#"><%= image_tag "img6.jpg" %> </a>
-              <p> Jean Paul Sartre </br>
-               110 years old </br>
-                Philosopher and Writer</p>
-              <a href="#"><%= image_tag "img7.jpg" %> </a>
-              <p> Jayz </br>
-               38 years old </br>
-              Rapper, Autor, Compositor</p>
-              <a href="#"><%= image_tag "img8.jpg" %> </a>
-              <p> Mark Zuckerberg </br>
-               30 years old </br>
-              Founder and CEO at Facebook</p>
-              <a href="#"><%= image_tag "img9.jpg" %> </a>
-              <p> Ariel Goldenblat </br>
-               42 years old </br>
-              Vincent Chase's movie agent</p>
-              <a href="#"><%= image_tag "img10.jpg"%> </a>
-              <p> Serge Gainsburg </br>
-               90 years old </br>
-              French singer, philosopher, writer, compositor</p>
-              
-            </div>
-          </div>
         </div>
       </div>
     </div> <!-- end block2-bg -->
@@ -364,15 +322,21 @@
 
     <div id="block4-bg">
       <div class="row block4">
-        <div class="small-6 large-centered columns">
-            <a class="social" href="http://twitter.com/crowdded" style="text-decoration:none" target="_blank">
-            <i class="fa fa-twitter fa-5x"></i></a>
-            <a class="google" href="http://google.com/crowdfunding" style="text-decoration:none" target="_blank">
-            <i class="fa fa-google-plus fa-5x"></i></a>
-            <a class="face" href="http://facebook.com/anath.abensour" style="text-decoration:none" target="_blank">
-            <i class="fa fa-facebook fa-5x"></i></a>
-            <a class="linkedin" href="http://linkedin.com/" style="text-decoration:none" target="_blank">
-            <i class="fa fa-linkedin fa-5x"></i></a>
+        <div class="small-6 large-centered columns" id="ico-social" >
+          <ul>
+            <li><a class="social" href="http://twitter.com/crowdded" style="text-decoration:none" target="_blank">
+                <i class="fa fa-twitter fa-5x"></i></a>
+            </li>
+            <li><a class="google" href="http://google.com/crowdfunding" style="text-decoration:none" target="_blank">
+                <i class="fa fa-google-plus fa-5x"></i></a>
+            </li>
+            <li><a class="face" href="http://facebook.com/anath.abensour" style="text-decoration:none" target="_blank">
+                <i class="fa fa-facebook fa-5x"></i></a>
+            </li>
+            <li><a class="linkedin" href="http://linkedin.com/" style="text-decoration:none" target="_blank">
+                <i class="fa fa-linkedin fa-5x"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -393,13 +357,9 @@
     </script>
 
 
-    <%= javascript_include_tag "jquery.js" %>
     <%= javascript_include_tag "foundation.min.js" %>
     <%= javascript_include_tag "classie.js" %>
     <%= javascript_include_tag "demo1.js" %>
-    <%= javascript_include_tag "jquery.easing.js" %>
-    <%= javascript_include_tag "scroller.js" %>
-    <%= javascript_include_tag "init.js" %>
 
 
     <script>
