@@ -23,6 +23,9 @@
             <% if @projects %>
               <% @projects.each do |prj| %>
                 <div class='project-box'>
+                <%= link_to project_path(prj) do %>
+                  <img src="<%= prj.thumbnail %>?image_resize=1000&image_play_button=true&image_play_button_color=FF463A"/>                  
+                <% end %>
                   <h3>
                     <%= link_to prj.name, project_path(prj) %>
                   </h3>
