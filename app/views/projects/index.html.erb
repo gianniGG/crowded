@@ -1,6 +1,4 @@
-<head>
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-</head>
+
 <body>
 <%= render "shared/header" %>
 
@@ -24,7 +22,7 @@
               <% @projects.each do |prj| %>
                 <div class='project-box'>
                 <%= link_to project_path(prj) do %>
-                  <img src="<%= prj.thumbnail %>?image_resize=1000&image_play_button=true&image_play_button_color=FF463A"/>                  
+                  <img src="<%= prj.thumbnail %>?image_resize=1000&image_play_button=true&image_play_button_color=FF463A"/>
                 <% end %>
                   <h3>
                     <%= link_to prj.name, project_path(prj) %>

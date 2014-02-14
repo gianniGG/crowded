@@ -2,13 +2,11 @@ class ProjectsController < ApplicationController
   respond_to :html, :json
 
   def home
-    # render layout: false
     @projects = Project.last(3)
   end
 
   def new
     @project = Project.new
-    # render :layout => false
   end
 
   def create
@@ -37,7 +35,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    # render layout: false
     @project = Project.find(params[:id])
     respond_with @project do |format|
       format.html { render :layout => false }
