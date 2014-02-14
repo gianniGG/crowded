@@ -204,6 +204,13 @@ button {
   margin-bottom: 5px;
 }
 
+
+.recent-donor-li {
+  background: rgb(166, 196, 166);
+  border: transparent;
+  float: left;
+}
+
 .row.portal {
   padding-bottom: 100px;
 }
@@ -281,6 +288,12 @@ border-bottom: 1px solid;
 .block2 h1 img {
 max-width: 8%;
 padding-bottom: 29px;
+}
+
+.row.funders-gallery {
+  /*display: inline-block;*/
+  padding-bottom: 80px;
+  /*margin-left: 190px;*/
 }
 
 
@@ -393,11 +406,14 @@ ul.project-title {
 }
 
 
+
+
 /*SECTION 4 SOCIAL BAKING*/
 
 #block4-bg {
 background-color:rgba(33, 57, 142, 0.68);
 height:230px;
+margin-left: auto;
 }
 
 
@@ -430,13 +446,21 @@ color:white;
   margin-bottom: -30px;
 }
 
+@media(max-width: 640px) {
+  #ico-social .fa-5x {
+    font-size: 50px;
+  }
+}
+
+@media(max-width: 640px) {
+  #ico-social {
+    margin-left: -40px;
+  }
+}
+
 /*OVERLAY*/
 nav {
   font-family: Raleway, Helevetica Neue, sans-serif;
-}
-
-.overlay {
-  background: #3E92CE;
 }
 
 button.overlay-close {
@@ -488,7 +512,7 @@ button hr {
 }
 
 #project_search {
-        width: 30%;
+        width: 50%;
     margin-left: 16px;
 }
 
@@ -514,9 +538,13 @@ button hr {
 
 .recent-donor-li {
   list-style-type: none;
-  border: 2px solid green;
+  /*border: 2px solid green;*/
   border-radius: 5px;
   width: 50%;
   padding: 1%;
   margin: 1%;
+}
+
+#block2-bg.backers-gallery {
+  height: auto;
 }

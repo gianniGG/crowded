@@ -135,22 +135,36 @@
 
 <!-- SECTION 2: FUNDERS GALLERY -->
 
-    <div id="block2-bg">
+    <div id="block2-bg" class='backers-gallery'>
 
-     <div class="row block2">
+      <div class="row block2">
         <div class="small-6 large-centered columns">
           <h1><%= image_tag "crowdleaf.png"%> Meet the crowdd </h1>
-
-
         </div>
       </div>
+
+      <div class="row funders-gallery">
+        <div class="small-3 columns">
+        <%= image_tag "funder1.png"%>
+        </div>        
+        <div class="small-3 columns">
+        <%= image_tag "funder2.png"%>
+        </div>       
+        <div class="small-3 columns">
+        <%= image_tag "funder3.png"%>
+        </div>       
+        <div class="small-3 columns">
+        <%= image_tag "funder4.png"%>
+        </div>
+      </div>
+
     </div> <!-- end block2-bg -->
 
 <!-- SECTION 3: DISCOVER PROJECTS -->
 
     <div id="block3-bg">
       <div class="large-12 columns discover-title">
-        <h2>FEATURED PROJECTS</h2>
+        <h2>Featured Projects</h2>
       </div>
       <div class="row projects-top" data-equalizer>
 
@@ -347,7 +361,7 @@
     <script>
       wistiaEmbed = Wistia.embed("<%= @project.hashed_id %>", {
 
-      playerColor: "ff0000",
+      playerColor: "C85D5D",
       fullscreenButton: false,
       container: "wistia_<%= @project.hashed_id %>",
       videoFoam: true
