@@ -9,10 +9,12 @@
 
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <%= stylesheet_link_tag "foundation.css" %> 
-    <%= stylesheet_link_tag "project.css" %> 
-    <%= stylesheet_link_tag "style1.css" %> 
+    <%= stylesheet_link_tag "foundation.css" %>
+    <%= stylesheet_link_tag "project.css" %>
+    <%= stylesheet_link_tag "style1.css" %>
     <%= stylesheet_link_tag "demo2.css" %>
+
+    <%= javascript_include_tag "application" %>
 
     <%= javascript_include_tag "modernizr.js" %>
     <%= javascript_include_tag "modernizr.custom.js" %>
@@ -53,18 +55,20 @@
           </div> <!-- large-12 columns -->
         </div>  <!-- end row -->
 
-        <div class="row">
+        <% if @project.donations %>
+          <div class="row">
 
-          <div class="recent_donors" data-id="<%= @project.id %>">
-            <ul>
-              <% @project.recent_five.reverse.each do |donation| %>
-                <li class="recent-donor-li">
-                  <%= donation.user.name %> gave £1.00 <%= "#{time_ago_in_words(donation.created_at)}"  %> ago!
-                </li>
-              <% end %>
-            </ul>
+            <div class="recent_donors" data-id="<%= @project.id %>">
+              <ul>
+                <% @project.recent_five.reverse.each do |donation| %>
+                  <li class="recent-donor-li">
+                    <%= donation.user.name %> gave £1.00 <%= "#{time_ago_in_words(donation.created_at)}"  %> ago!
+                  </li>
+                <% end %>
+              </ul>
+            </div>
           </div>
-        </div>
+        <% end %>
 
         <div class='row' style="padding: 10px 5px 0px 10px;">
           <div class="large-8 medium-12 columns wistia">
@@ -138,7 +142,7 @@
           <h1><%= image_tag "crowdleaf.png"%> Meet the crowdd </h1>
 
           <div class="scroller demo2">
-            
+
             <div class="inside">
               <a href="#"><%= image_tag "img1.jpg" %> </a>
 
@@ -181,7 +185,7 @@
               <p> Serge Gainsburg </br>
                90 years old </br>
               French singer, philosopher, writer, compositor</p>
-              
+
             </div>
           </div>
         </div>
@@ -393,7 +397,6 @@
     </script>
 
 
-    <%= javascript_include_tag "jquery.js" %>
     <%= javascript_include_tag "foundation.min.js" %>
     <%= javascript_include_tag "classie.js" %>
     <%= javascript_include_tag "demo1.js" %>
