@@ -1,6 +1,22 @@
 nav.top-bar {
-	height: 71px;
-	background-color: white;
+  height: 71px;
+  background-color: white;
+}
+
+button.alert, .button.alert {
+background-color: rgba(131, 176, 103, 0.89);
+border-color: #9e0c0f;
+color: white;
+
+
+/*height: 37px;*/
+}
+.button.alert:hover, .button.alert:focus {
+background-color: #43D769;
+}
+.top-bar-section ul li {
+float: left;
+padding-right: 20px;
 }
 
 .top-bar-section ul li > a.button.alert {
@@ -13,26 +29,31 @@ font-size: 15px;
 .button.alert:hover, .button.alert:focus {
 background-color: #43D769;
 }
+.top-bar-section ul li > a.button.alert:hover {
+background: #17CE47;
+}
 
 
 
 .name a {
   padding-left: 260px;
-  padding-top: 8px;
+  padding-top: 6px;
   display: inline-block;
 }
+
 .name a img {
   width: 200px;
 }
 
 .top-bar-section ul {
-	padding-right: 80px;
-	padding-top: 20px;
+  padding-right: 7px;
+  padding-top: 20px;
+
 }
 
 .top-bar-section ul, .top-bar-section li:not(.has-form) a:not(.button) {
-	background: none;
-	color: black;
+  background: none;
+  color: black;
 }
 
 .top-bar-section ul li > a {
@@ -45,27 +66,25 @@ font-weight: 900;
 font-size: 18px;
 font-weight: normal;
 }
-.top-bar-section li:not(.has-form) a:not(.button):hover {
-background: white; }
-.top-bar-section ul li > a.button.alert:hover {
-background: #43D769;
-}
+
 
 
 #twitter-widget-0 {
 	width: 100%;
 }
-.block1 {
+.blockuser {
 height:700px;
 }
 
-.small-6 {
-/*margin-top: 8%;*/
+.small-6.large-centered.columns.blockuser{
+text-align:center;
+margin-top: 8%;
 position: relative;
-width: 100%;
-/*height: 700px;*/
+overflow: hidden;
+width: 865px;
 
-padding: 20px;
+
+/*padding: 20px;*/
 
 }
 
@@ -140,21 +159,18 @@ margin-left: 227px;
 
 .search{
 width: 568px;
-height: 100px;
-padding: 10px;
+height: 80px;
+
 margin-top: 29px;
 margin-left: 230px;
 
 }
 
-.history {
-	height: 200px;
-}
 
 .button.expand {
 padding-right: 0;
 padding-left: 0;
-width: 46%;
+width: 60%;
 }
 
 .button.searchbtn {
@@ -174,9 +190,12 @@ a.alert.button.expand {
 a.alert.button.expand:hover {
 background: #43D769;}
 
-#block1 {
-	
+
+
+/*#blockuser footer {
+	margin-top: 10%;
 }
+*/
 
 
 
