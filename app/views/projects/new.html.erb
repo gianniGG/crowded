@@ -11,7 +11,7 @@
     <%= javascript_include_tag "modernizr.custom.js" %>
     <%= javascript_include_tag "modernizr.js" %>
     <%= javascript_include_tag "application.js" %>
-    
+
 </head>
   <body>
     <div class="page-container">
@@ -22,19 +22,19 @@
         </div>
     </div>
 
+    <% if current_company %>
     <div class="row projectform">
-        <%= form_for @project do |f| %>
+      <%= form_for @project do |f| %>
         <div class="large-12 columns">
 
-        <div id="submit-title">
-          <h2>SUBMIT YOUR PROJECT</h2>
-          <div class="large-12 columns">
-            <div id="wistia-upload-widget" style="width:400px; height:30px; margin:40px auto;">
+          <div id="submit-title">
+            <h2>SUBMIT YOUR PROJECT</h2>
+            <div class="large-12 columns">
+              <div id="wistia-upload-widget" style="width:400px; height:30px; margin:40px auto;"></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
     <form>
       <div class="row projectform">
@@ -79,16 +79,24 @@
         <div class="row projectform">
           <div class="large-12 columns">
             <div id="launch-btn" style="text-align:center;">
-         <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
-         <%= f.hidden_field :company_id, :value => current_company.id %> 
-         <%= f.hidden_field :thumbnail, :value => "", :id => "project_thumbnail" %>
-         <%= f.button :Launch %>
+             <%= f.hidden_field :hashed_id, :value => "", :id => "project_hashed_id" %>
+             <%= f.hidden_field :company_id, :value => current_company.id %>
+             <%= f.hidden_field :thumbnail, :value => "", :id => "project_thumbnail" %>
+             <%= f.button :Launch %>
             </div>
          </div>
        </div>
     </form>
     <% end %>
   </div> <!-- end of page container -->
+    <% else %>
+      <div class="row projectform">
+          <div class="large-12 columns leaf">
+            Please <a href='/companies/sign_in'> sign in as a company</a> first.
+          </div>
+      </div>
+     <% end %>
+
   <%= javascript_include_tag "foundation.min.js" %>
 
    <script>
@@ -96,8 +104,8 @@
    </script>
    <script src="http://static.wistia.com/javascripts/upload_widget.js"></script>
    <script>
-      var widget1 = new wistia.UploadWidget({ 
-        divId: 'wistia-upload-widget', 
+      var widget1 = new wistia.UploadWidget({
+        divId: 'wistia-upload-widget',
           publicProjectId: 'tluer5qj30',
             callbacks: {
               'uploadSuccess': function(jsonFile){
