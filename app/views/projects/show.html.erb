@@ -72,7 +72,7 @@
 
         <div class='row' style="padding: 10px 5px 0px 10px;">
           <div class="large-8 medium-12 columns wistia">
-            <div id="wistia_72ptjwixw3" data-video-width="640" data-video-height="360">
+            <div id="wistia_<%= @project.hashed_id %>" data-video-width="640" data-video-height="360">
               this is displayed if javascript is disabled
             </div>
           </div>
@@ -385,11 +385,11 @@
     <script src="http://fast.wistia.net/static/E-v1.js"></script>
 
     <script>
-    wistiaEmbed = Wistia.embed("72ptjwixw3", {
+      wistiaEmbed = Wistia.embed("<%= @project.hashed_id %>", {
 
       playerColor: "ff0000",
       fullscreenButton: false,
-      container: "wistia_72ptjwixw3",
+      container: "wistia_<%= @project.hashed_id %>",
       videoFoam: true
       // videoWidth: 400,
       // videoHeight: 338
