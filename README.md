@@ -7,7 +7,10 @@ Technology:
 ---
 |user |admin |company |project |donation |
 |:--|:--|:--|:---|:---|
-|login with devise and OAuth via twitter, fb or linkedin | ability to create admins | a company has-many projects and can create soley them| a project has-many donations, it is websocketed so that donations occur in real-time| a donation adds points to a user and is executed via stripe |
+|login with devise and OAuth via twitter, fb or linkedin | ability to create admins | a company has-many projects and can soley create them| a project has-many donations, it is websocketed so that donations occur in real-time| a donation adds points to a user and is executed via stripe |
+
+Ideas
+---
 
 |Must |Should |Could |
 |:--- |:----- |:---- |
